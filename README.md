@@ -5,7 +5,7 @@ Profiling LLM decode token by token: Llama-3.1-8B (BF16) on one H100 SXM. What o
 millisecond of the gap goes: CPU launch gaps, CUDA graphs and fusion, weight and KV-cache reads,
 batching, quantization, and a vLLM reference.
 
-Blog post: `<link>` · Full write-up: [`notes/REPORT.md`](notes/REPORT.md) · Every number with its run ID: [`notes/RESULTS.md`](notes/RESULTS.md)
+Blog post: [Where does decode time go? (Medium)](https://medium.com/@ayushgarg70/where-does-decode-time-go-profiling-llama-3-1-8b-on-an-h100-token-by-token-c3afbe77a459) · Full write-up: [`notes/REPORT.md`](notes/REPORT.md) · Every number with its run ID: [`notes/RESULTS.md`](notes/RESULTS.md)
 
 ![GPU timelines of one decode step, launched four ways](figures/timeline.png)
 
