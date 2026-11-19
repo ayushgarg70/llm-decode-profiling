@@ -1,0 +1,2 @@
+kernel,nvtx,group,duration_us,dram_read_GB,dram_read_TBps,dram_pct_peak,dram_TBps,sm_pct_peak,tensor_pipe_pct,tensor_pipe_pct_active,sm_issue_pct,tensor_gmma_inst_pct,tensor_hmma_inst_pct,tma_load_GB,ldgsts_inst,grid,block,waves_per_sm
+nvjet_sm90_tst_384x8_64x4_2x1_v_bz_TNT,"30726  ""<default domain>:decode step 0:none:none:none:none:none:none""  ""<default domain>:lm_head:none:none:none:none:none:none"" ",weight_gemm,360.352,1.050807,2.916056,87.239071,2.924358,4.498778,2.995725,3.542314,4.111086,2.995725,1.497862,1.072562,0.0,132.0,384.0,1.0

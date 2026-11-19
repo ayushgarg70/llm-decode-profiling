@@ -1,0 +1,76 @@
+
+=== 1. GPU, driver, clocks, power ===
+name, pci.bus_id, driver_version, memory.total [MiB], power.limit [W], clocks.max.sm [MHz], clocks.max.memory [MHz]
+NVIDIA H100 80GB HBM3, 00000000:8D:00.0, 580.173.02, 81559 MiB, 700.00 W, 1980 MHz, 2619 MHz
++-----------------------------------------+------------------------+----------------------+
+
+==============NVSMI LOG==============
+
+Timestamp                                              : Wed Nov 18 08:26:21 2026
+Driver Version                                         : 580.173.02
+CUDA Version                                           : 13.0
+
+Attached GPUs                                          : 1
+GPU 00000000:8D:00.0
+    Clocks
+        Graphics                                       : 345 MHz
+        SM                                             : 345 MHz
+        Memory                                         : 2619 MHz
+        Video                                          : 765 MHz
+    Applications Clocks
+        Graphics                                       : 1980 MHz
+        Memory                                         : 2619 MHz
+    Default Applications Clocks
+        Graphics                                       : 1980 MHz
+        Memory                                         : 2619 MHz
+    Deferred Clocks
+        Memory                                         : N/A
+    Max Clocks
+        Graphics                                       : 1980 MHz
+        SM                                             : 1980 MHz
+        Memory                                         : 2619 MHz
+        Video                                          : 1545 MHz
+    Max Customer Boost Clocks
+        Graphics                                       : 1980 MHz
+    SM Clock Samples
+        Duration                                       : Not Found
+        Number of Samples                              : Not Found
+        Max                                            : Not Found
+        Min                                            : Not Found
+        Avg                                            : Not Found
+    Memory Clock Samples
+        Duration                                       : Not Found
+        Number of Samples                              : Not Found
+        Max                                            : Not Found
+        Min                                            : Not Found
+        Average Power Draw                             : 69.16 W
+        Instantaneous Power Draw                       : 69.55 W
+        Current Power Limit                            : 700.00 W
+        Requested Power Limit                          : 700.00 W
+        Default Power Limit                            : 700.00 W
+        Min Power Limit                                : 200.00 W
+        Max Power Limit                                : 700.00 W
+        Average Power Draw                             : 51.93 W
+6.11.0-1016-nvidia
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+torch 2.15.0+cu132 cuda 13.2 | transformers 5.23.0
+
+=== 2. Nsight tools ===
+nsys: /usr/local/bin/nsys
+NVIDIA Nsight Systems version 2025.3.2.474-253236389321v0
+ncu: /opt/nvidia/nsight-compute/2025.3.1/ncu
+Version 2025.3.1.0 (build 36398880) (public-release)
+RmProfilingAdminOnly (1 = only root may read counters):
+RmProfilingAdminOnly: 0
+
+=== 3. ncu hardware counters ===
+==PROF== Profiling "reduce_kernel": 0%....50%....100% - 1 pass
+  void reduce_kernel<512, 1, ReduceOp<BFloat16, func_wrapper_t<BFloat16, sum_functor<BFloat16, float, BFloat16>::operator ()(TensorIterator &)::[lambda(float, float) (instance 1)]>, unsigned int, BFloat16, 4, 8>>(T3) (1, 528, 1)x(512, 1, 1), Context 1, Stream 7, Device 0, CC 9.0
+    dram__throughput.avg.pct_of_peak_sustained_elapsed           %        76.24
+    gpu__time_duration.sum                                      us        53.63
+RESULT: ncu works as normal user.
+
+=== 4. nsys trace ===
+RESULT: nsys works (224K report)
+
+Saved to data/env/check_20261118_082621.txt

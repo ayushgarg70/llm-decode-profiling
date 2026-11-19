@@ -1,0 +1,3 @@
+timestamp,clocks.sm,clocks.mem,power.draw,temperature.gpu,utilization.gpu
+2026/11/18 09:52:44.147, 1980, 2619, 136.68, 31, 25
+2026/11/18 09:52:44.351, 1980, 2619, 180.13, 32, 26

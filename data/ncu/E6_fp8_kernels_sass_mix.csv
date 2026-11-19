@@ -1,0 +1,13 @@
+kernel,total_inst,HGMMA,QGMMA,IGMMA,HMMA,IMMA,UTMALDG,UTMASTG,UTMAPF,UBLKCP,LDGSTS,LDG,LDS,STG,STS,FFMA,FMUL,FADD,MUFU,SHFL,BAR,SYNCS
+"void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::TensorListMetadata<(int)2>, at::native::<unnamed>::UnaryOpFunctor<long, (int)2, (int)1, (int)1>, at::native::Copy<long, long>>(T1, T2, T3...)",2880,0,0,0,0,0,0,0,0,0,0,128,0,128,0,0,0,0,0,0,0,0
+triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_embedding_mean_mul_pow_rsqrt_t_view_0,6664,0,0,0,0,0,0,0,0,0,0,256,64,99,64,96,1056,352,64,640,192,0
+nvjet_sm90_qqtst_128x128_128x6_4x1_v_bz_ovscale_TNT,436772,0,32768,0,0,0,2112,1024,0,0,0,384,2816,0,1152,16384,32896,0,0,0,128,28866
+nvjet_sm90_qqtst_128x128_128x6_4x1_v_bz_ovscale_TNT,109192,0,8192,0,0,0,528,256,0,0,0,96,704,0,288,4096,8224,0,0,0,32,7216
+triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1,5152,0,0,0,0,0,0,0,0,0,0,384,0,32,0,64,64,0,0,0,64,0
+nvjet_sm90_qqtst_128x128_128x6_4x1_v_bz_ovscale_TNT,109196,0,8192,0,0,0,528,256,0,0,0,96,704,0,288,4096,8224,0,0,0,32,7218
+triton_poi_fused_index_copy_transpose_view_2,672,0,0,0,0,0,0,0,0,0,0,32,0,16,0,0,0,0,0,0,16,0
+triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3,18304,0,0,0,0,0,0,0,0,0,0,1536,0,128,0,256,256,0,0,0,256,0
+triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_4,7138,0,0,0,0,0,0,0,0,0,0,608,0,73,0,0,0,0,0,0,0,0
+cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0,904916,0,0,0,38912,0,0,0,0,0,36864,8960,17320,4480,7264,10944,50112,48552,11968,4480,8352,0
+"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, bool, const void *, bool, long, const void *, bool, bool)",81792,0,0,0,0,0,0,0,0,0,576,0,3168,96,0,2400,3488,960,1792,0,512,0
+triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5,3395,0,0,0,0,0,0,0,0,0,0,256,32,129,32,0,480,0,32,320,32,0

@@ -1,0 +1,81 @@
+trace,date,run_id,group,ms_per_step,launches_per_step,steps_profiled,notes
+E1_own_eager,2026-11-18,20261118-083523_E1_own-eager_B1_s512_d5c8,weight_gemm,5.7627,385,5,"eager B1 s512; kernel times from nsys (cuda,nvtx,osrt), step time from timing run"
+E1_own_eager,2026-11-18,20261118-083523_E1_own-eager_B1_s512_d5c8,norm_rope_elementwise,1.78401,1068,5,"eager B1 s512; kernel times from nsys (cuda,nvtx,osrt), step time from timing run"
+E1_own_eager,2026-11-18,20261118-083523_E1_own-eager_B1_s512_d5c8,attention,0.295654,64,5,"eager B1 s512; kernel times from nsys (cuda,nvtx,osrt), step time from timing run"
+E1_own_eager,2026-11-18,20261118-083523_E1_own-eager_B1_s512_d5c8,kv_cache_write,0.172704,64,5,"eager B1 s512; kernel times from nsys (cuda,nvtx,osrt), step time from timing run"
+E1_own_eager,2026-11-18,20261118-083523_E1_own-eager_B1_s512_d5c8,sampling,0.037075,1,5,"eager B1 s512; kernel times from nsys (cuda,nvtx,osrt), step time from timing run"
+E1_own_eager,2026-11-18,20261118-083523_E1_own-eager_B1_s512_d5c8,other,0.0024704,1,5,"eager B1 s512; kernel times from nsys (cuda,nvtx,osrt), step time from timing run"
+E1_own_eager,2026-11-18,20261118-083523_E1_own-eager_B1_s512_d5c8,idle,8.33978,0,5,"eager B1 s512; kernel times from nsys (cuda,nvtx,osrt), step time from timing run"
+E1_hf_loop,2026-11-18,20261118-083410_E1_hf-loop_B1_s512_098c,weight_gemm,5.79329,385,5,HF loop B1 s512
+E1_hf_loop,2026-11-18,20261118-083410_E1_hf-loop_B1_s512_098c,norm_rope_elementwise,1.78123,1043,5,HF loop B1 s512
+E1_hf_loop,2026-11-18,20261118-083410_E1_hf-loop_B1_s512_098c,attention,0.257741,64,5,HF loop B1 s512
+E1_hf_loop,2026-11-18,20261118-083410_E1_hf-loop_B1_s512_098c,sampling,0.0365628,1,5,HF loop B1 s512
+E1_hf_loop,2026-11-18,20261118-083410_E1_hf-loop_B1_s512_098c,other,0.0024256,1,5,HF loop B1 s512
+E1_hf_loop,2026-11-18,20261118-083410_E1_hf-loop_B1_s512_098c,idle,9.78224,0,5,HF loop B1 s512
+E3_eager_graph,2026-11-18,20261118-092532_E3_own-eager_graph_B1_s512_05ca,weight_gemm,5.74912,385,5,E3 eager_graph B1 s512 (re-derived after sync clobber)
+E3_eager_graph,2026-11-18,20261118-092532_E3_own-eager_graph_B1_s512_05ca,norm_rope_elementwise,1.63796,1068,5,E3 eager_graph B1 s512 (re-derived after sync clobber)
+E3_eager_graph,2026-11-18,20261118-092532_E3_own-eager_graph_B1_s512_05ca,attention,0.288818,64,5,E3 eager_graph B1 s512 (re-derived after sync clobber)
+E3_eager_graph,2026-11-18,20261118-092532_E3_own-eager_graph_B1_s512_05ca,kv_cache_write,0.157562,64,5,E3 eager_graph B1 s512 (re-derived after sync clobber)
+E3_eager_graph,2026-11-18,20261118-092532_E3_own-eager_graph_B1_s512_05ca,sampling,0.036787,1,5,E3 eager_graph B1 s512 (re-derived after sync clobber)
+E3_eager_graph,2026-11-18,20261118-092532_E3_own-eager_graph_B1_s512_05ca,other,0.0028544,1,5,E3 eager_graph B1 s512 (re-derived after sync clobber)
+E3_eager_graph,2026-11-18,20261118-092532_E3_own-eager_graph_B1_s512_05ca,idle,0.509279,0,5,E3 eager_graph B1 s512 (re-derived after sync clobber)
+E3_compiled,2026-11-18,20261118-092636_E3_own-compiled_B1_s512_adff,weight_gemm,5.72992,385,5,E3 compiled B1 s512 (re-derived after sync clobber)
+E3_compiled,2026-11-18,20261118-092636_E3_own-compiled_B1_s512_adff,attention,0.343008,104,5,E3 compiled B1 s512 (re-derived after sync clobber)
+E3_compiled,2026-11-18,20261118-092636_E3_own-compiled_B1_s512_adff,kv_cache_write,0.0918202,64,5,E3 compiled B1 s512 (re-derived after sync clobber)
+E3_compiled,2026-11-18,20261118-092636_E3_own-compiled_B1_s512_adff,norm_rope_elementwise,0.208006,98,5,E3 compiled B1 s512 (re-derived after sync clobber)
+E3_compiled,2026-11-18,20261118-092636_E3_own-compiled_B1_s512_adff,sampling,0.0287744,1,5,E3 compiled B1 s512 (re-derived after sync clobber)
+E3_compiled,2026-11-18,20261118-092636_E3_own-compiled_B1_s512_adff,idle,0.646023,0,5,E3 compiled B1 s512 (re-derived after sync clobber)
+E3_compiled_graph,2026-11-18,20261118-092720_E3_own-compiled_graph_B1_s512_617d,weight_gemm,5.71076,385,5,E3 compiled_graph B1 s512 (re-derived after sync clobber)
+E3_compiled_graph,2026-11-18,20261118-092720_E3_own-compiled_graph_B1_s512_617d,attention,0.336702,104,5,E3 compiled_graph B1 s512 (re-derived after sync clobber)
+E3_compiled_graph,2026-11-18,20261118-092720_E3_own-compiled_graph_B1_s512_617d,kv_cache_write,0.0865472,64,5,E3 compiled_graph B1 s512 (re-derived after sync clobber)
+E3_compiled_graph,2026-11-18,20261118-092720_E3_own-compiled_graph_B1_s512_617d,norm_rope_elementwise,0.198355,98,5,E3 compiled_graph B1 s512 (re-derived after sync clobber)
+E3_compiled_graph,2026-11-18,20261118-092720_E3_own-compiled_graph_B1_s512_617d,sampling,0.0291582,1,5,E3 compiled_graph B1 s512 (re-derived after sync clobber)
+E3_compiled_graph,2026-11-18,20261118-092720_E3_own-compiled_graph_B1_s512_617d,other,0.0016512,1,5,E3 compiled_graph B1 s512 (re-derived after sync clobber)
+E3_compiled_graph,2026-11-18,20261118-092720_E3_own-compiled_graph_B1_s512_617d,idle,0.262804,0,5,E3 compiled_graph B1 s512 (re-derived after sync clobber)
+E6_int8_B1,2026-11-18,20261118-103847_E6_own-int8-compiled_graph_B1_s2048_c3b6,weight_gemm,3.79068,258,5,E6 int8 B1 s2048 compiled_graph
+E6_int8_B1,2026-11-18,20261118-103847_E6_own-int8-compiled_graph_B1_s2048_c3b6,attention,0.378156,72,5,E6 int8 B1 s2048 compiled_graph
+E6_int8_B1,2026-11-18,20261118-103847_E6_own-int8-compiled_graph_B1_s2048_c3b6,norm_rope_elementwise,0.047328,34,5,E6 int8 B1 s2048 compiled_graph
+E6_int8_B1,2026-11-18,20261118-103847_E6_own-int8-compiled_graph_B1_s2048_c3b6,other,0.0016,1,5,E6 int8 B1 s2048 compiled_graph
+E6_int8_B1,2026-11-18,20261118-103847_E6_own-int8-compiled_graph_B1_s2048_c3b6,idle,-0.197158,0,5,E6 int8 B1 s2048 compiled_graph
+E6_int4_B1,2026-11-18,20261118-105240_E6_own-int4-compiled_graph_B1_s2048_a74c,weight_gemm,2.55823,225,5,E6 int4 B1 s2048 compiled_graph
+E6_int4_B1,2026-11-18,20261118-105240_E6_own-int4-compiled_graph_B1_s2048_a74c,attention,0.418527,104,5,E6 int4 B1 s2048 compiled_graph
+E6_int4_B1,2026-11-18,20261118-105240_E6_own-int4-compiled_graph_B1_s2048_a74c,kv_cache_write,0.0885758,64,5,E6 int4 B1 s2048 compiled_graph
+E6_int4_B1,2026-11-18,20261118-105240_E6_own-int4-compiled_graph_B1_s2048_a74c,norm_rope_elementwise,0.231993,98,5,E6 int4 B1 s2048 compiled_graph
+E6_int4_B1,2026-11-18,20261118-105240_E6_own-int4-compiled_graph_B1_s2048_a74c,sampling,0.0183358,1,5,E6 int4 B1 s2048 compiled_graph
+E6_int4_B1,2026-11-18,20261118-105240_E6_own-int4-compiled_graph_B1_s2048_a74c,other,0.0016,1,5,E6 int4 B1 s2048 compiled_graph
+E6_int4_B1,2026-11-18,20261118-105240_E6_own-int4-compiled_graph_B1_s2048_a74c,idle,0.128627,0,5,E6 int4 B1 s2048 compiled_graph
+E6_fp8_B1,2026-11-18,20261118-105734_E6_own-fp8-compiled_graph_B1_s2048_409b,weight_gemm,5.02323,386,5,E6 fp8 B1 s2048 compiled_graph
+E6_fp8_B1,2026-11-18,20261118-105734_E6_own-fp8-compiled_graph_B1_s2048_409b,attention,0.430341,113,5,E6 fp8 B1 s2048 compiled_graph
+E6_fp8_B1,2026-11-18,20261118-105734_E6_own-fp8-compiled_graph_B1_s2048_409b,norm_rope_elementwise,0.148352,33,5,E6 fp8 B1 s2048 compiled_graph
+E6_fp8_B1,2026-11-18,20261118-105734_E6_own-fp8-compiled_graph_B1_s2048_409b,kv_cache_write,0.0827328,64,5,E6 fp8 B1 s2048 compiled_graph
+E6_fp8_B1,2026-11-18,20261118-105734_E6_own-fp8-compiled_graph_B1_s2048_409b,sampling,0.0182144,1,5,E6 fp8 B1 s2048 compiled_graph
+E6_fp8_B1,2026-11-18,20261118-105734_E6_own-fp8-compiled_graph_B1_s2048_409b,other,0.001536,1,5,E6 fp8 B1 s2048 compiled_graph
+E6_fp8_B1,2026-11-18,20261118-105734_E6_own-fp8-compiled_graph_B1_s2048_409b,idle,0.259322,0,5,E6 fp8 B1 s2048 compiled_graph
+E6_int8_B32,2026-11-18,20261118-104622_E6_own-int8-compiled_graph_B32_s2048_c08c,weight_gemm,539.844,225,3,E6 int8 B32 s2048 compiled_graph
+E6_int8_B32,2026-11-18,20261118-104622_E6_own-int8-compiled_graph_B32_s2048_c08c,attention,3.40434,80,3,E6 int8 B32 s2048 compiled_graph
+E6_int8_B32,2026-11-18,20261118-104622_E6_own-int8-compiled_graph_B32_s2048_c08c,norm_rope_elementwise,1.5181,998,3,E6 int8 B32 s2048 compiled_graph
+E6_int8_B32,2026-11-18,20261118-104622_E6_own-int8-compiled_graph_B32_s2048_c08c,kv_cache_write,0.0996583,64,3,E6 int8 B32 s2048 compiled_graph
+E6_int8_B32,2026-11-18,20261118-104622_E6_own-int8-compiled_graph_B32_s2048_c08c,sampling,0.0197013,1,3,E6 int8 B32 s2048 compiled_graph
+E6_int8_B32,2026-11-18,20261118-104622_E6_own-int8-compiled_graph_B32_s2048_c08c,other,0.001376,1,3,E6 int8 B32 s2048 compiled_graph
+E6_int8_B32,2026-11-18,20261118-104622_E6_own-int8-compiled_graph_B32_s2048_c08c,idle,4.47209,0,3,E6 int8 B32 s2048 compiled_graph
+E6_int4_B32,2026-11-18,20261118-105450_E6_own-int4-compiled_graph_B32_s2048_4de9,weight_gemm,17.6112,225,3,E6 int4 B32 s2048 compiled_graph
+E6_int4_B32,2026-11-18,20261118-105450_E6_own-int4-compiled_graph_B32_s2048_4de9,attention,3.38012,72,3,E6 int4 B32 s2048 compiled_graph
+E6_int4_B32,2026-11-18,20261118-105450_E6_own-int4-compiled_graph_B32_s2048_4de9,norm_rope_elementwise,0.283861,98,3,E6 int4 B32 s2048 compiled_graph
+E6_int4_B32,2026-11-18,20261118-105450_E6_own-int4-compiled_graph_B32_s2048_4de9,kv_cache_write,0.102815,64,3,E6 int4 B32 s2048 compiled_graph
+E6_int4_B32,2026-11-18,20261118-105450_E6_own-int4-compiled_graph_B32_s2048_4de9,sampling,0.0203947,1,3,E6 int4 B32 s2048 compiled_graph
+E6_int4_B32,2026-11-18,20261118-105450_E6_own-int4-compiled_graph_B32_s2048_4de9,other,0.00141867,1,3,E6 int4 B32 s2048 compiled_graph
+E6_int4_B32,2026-11-18,20261118-105450_E6_own-int4-compiled_graph_B32_s2048_4de9,idle,-0.373795,0,3,E6 int4 B32 s2048 compiled_graph
+E6_fp8_B32,2026-11-18,20261118-110026_E6_own-fp8-compiled_graph_B32_s2048_9e65,weight_gemm,5.12555,386,3,E6 fp8 B32 s2048 compiled_graph
+E6_fp8_B32,2026-11-18,20261118-110026_E6_own-fp8-compiled_graph_B32_s2048_9e65,attention,3.38203,81,3,E6 fp8 B32 s2048 compiled_graph
+E6_fp8_B32,2026-11-18,20261118-110026_E6_own-fp8-compiled_graph_B32_s2048_9e65,norm_rope_elementwise,0.090784,33,3,E6 fp8 B32 s2048 compiled_graph
+E6_fp8_B32,2026-11-18,20261118-110026_E6_own-fp8-compiled_graph_B32_s2048_9e65,kv_cache_write,0.10432,64,3,E6 fp8 B32 s2048 compiled_graph
+E6_fp8_B32,2026-11-18,20261118-110026_E6_own-fp8-compiled_graph_B32_s2048_9e65,sampling,0.018912,1,3,E6 fp8 B32 s2048 compiled_graph
+E6_fp8_B32,2026-11-18,20261118-110026_E6_own-fp8-compiled_graph_B32_s2048_9e65,other,0.00138667,1,3,E6 fp8 B32 s2048 compiled_graph
+E6_fp8_B32,2026-11-18,20261118-110026_E6_own-fp8-compiled_graph_B32_s2048_9e65,idle,0.039365,0,3,E6 fp8 B32 s2048 compiled_graph
+E6_bf16_B32,2026-11-18,20261118-103531_E6_own-compiled_graph_B32_s2048_eaeb,attention,3.36808,72,3,E6 bf16 B32 s2048 compiled_graph
+E6_bf16_B32,2026-11-18,20261118-103531_E6_own-compiled_graph_B32_s2048_eaeb,weight_gemm,5.86621,321,3,E6 bf16 B32 s2048 compiled_graph
+E6_bf16_B32,2026-11-18,20261118-103531_E6_own-compiled_graph_B32_s2048_eaeb,norm_rope_elementwise,0.232542,98,3,E6 bf16 B32 s2048 compiled_graph
+E6_bf16_B32,2026-11-18,20261118-103531_E6_own-compiled_graph_B32_s2048_eaeb,kv_cache_write,0.105791,64,3,E6 bf16 B32 s2048 compiled_graph
+E6_bf16_B32,2026-11-18,20261118-103531_E6_own-compiled_graph_B32_s2048_eaeb,sampling,0.0294187,1,3,E6 bf16 B32 s2048 compiled_graph
+E6_bf16_B32,2026-11-18,20261118-103531_E6_own-compiled_graph_B32_s2048_eaeb,other,0.00135467,1,3,E6 bf16 B32 s2048 compiled_graph
+E6_bf16_B32,2026-11-18,20261118-103531_E6_own-compiled_graph_B32_s2048_eaeb,idle,-0.066488,0,3,E6 bf16 B32 s2048 compiled_graph

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+
+# Profiler outputs (large; selected ones get attached to a GitHub release)
+traces/
+reports/
+*.nsys-rep
+*.ncu-rep
+*.qdrep
+*.sqlite
+
+# Model weights / caches
+weights/
+hf_cache/
+*.safetensors
+
+# Secrets and OS noise
+.env
+.DS_Store
+.venv-vllm/
+logs/

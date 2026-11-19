@@ -1,0 +1,462 @@
+start_us,dur_us,grid,block,group,kernel
+0.000,1.408,2,512,other,"void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::TensorListMetadata<(int)2>, at::native::<unnamed>::UnaryOpFunctor<long, (int)2, (int)1, (int)1>, at::native::Copy<long, lon"
+6.272,3.872,8,256,norm_rope_elementwise,triton_red_fused__to_copy_add_embedding_mean_mul_pow_rsqrt_0
+10.528,40.479,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+51.423,12.320,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+64.319,1.856,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+66.591,12.512,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+79.583,1.472,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+81.471,1.856,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+83.807,1.408,10,64,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_4
+85.631,105.504,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+191.519,40.672,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+232.831,3.104,16,512,norm_rope_elementwise,triton_red_fused__to_copy_add_embedding_mean_mul_pow_rsqrt_view_5
+236.351,134.528,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+371.135,134.495,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+505.918,2.048,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+508.382,138.496,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+647.166,6.688,8,256,norm_rope_elementwise,triton_red_fused__to_copy_add_embedding_mean_mul_pow_rsqrt_view_7
+654.270,40.768,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+695.454,13.024,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+708.894,2.080,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+711.390,13.056,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+724.926,1.376,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+726.686,1.888,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+728.990,104.095,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+833.469,40.288,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+874.205,3.360,16,256,norm_rope_elementwise,triton_red_fused__to_copy_add_embedding_mean_mul_pow_rsqrt_view_8
+877.949,134.464,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+1012.669,134.304,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+1147.261,2.080,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+1149.725,137.023,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+1287.004,2.432,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+1289.820,40.192,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+1330.428,13.024,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+1343.868,1.824,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+1346.108,13.120,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+1359.708,1.280,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+1361.404,1.824,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+1363.644,102.848,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+1466.812,40.672,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+1507.900,3.136,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+1511.484,134.847,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+1646.587,134.496,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+1781.371,2.048,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+1783.835,137.792,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+1921.883,5.376,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+1927.643,40.831,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+1968.890,12.928,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+1982.234,1.888,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+1984.538,12.992,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+1998.010,1.344,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+1999.770,1.920,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+2002.106,103.552,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+2105.978,40.960,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+2147.354,2.720,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+2150.586,134.592,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+2285.434,134.623,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+2420.281,1.984,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+2422.681,138.528,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+2561.497,2.208,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+2564.121,40.800,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+2605.305,12.896,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+2618.649,1.920,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+2620.953,12.992,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+2634.393,1.312,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+2636.121,1.824,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+2638.393,1.280,10,64,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_4
+2640.281,103.743,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+2744.312,40.064,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+2784.792,3.168,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+2788.536,134.528,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+2923.320,134.304,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+3057.880,1.920,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+3060.248,138.143,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+3198.647,5.056,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+3204.119,40.128,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+3244.663,13.344,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+3258.423,1.888,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+3260.727,13.408,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+3274.615,1.344,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+3276.375,1.888,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+3278.679,102.816,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+3381.783,40.608,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+3422.839,2.752,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+3426.007,134.623,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+3560.918,134.592,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+3695.766,1.952,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+3698.134,141.088,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+3839.478,2.272,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+3842.134,40.287,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+3882.805,12.928,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+3896.117,1.856,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+3898.389,13.280,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+3912.149,1.312,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+3913.845,1.856,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+3916.117,102.880,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+4019.285,40.576,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+4060.245,3.200,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+4063.829,134.336,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+4198.453,134.655,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+4333.332,1.888,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+4335.636,140.544,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+4476.404,5.024,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+4481.844,40.576,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+4522.836,12.608,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+4535.924,1.888,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+4538.196,12.704,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+4551.380,1.344,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+4553.140,1.888,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+4555.444,103.807,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+4659.539,40.576,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+4700.563,2.848,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+4703.827,134.656,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+4838.771,134.560,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+4973.587,2.048,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+4976.051,141.343,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+5117.650,2.432,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+5120.498,40.384,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+5161.298,12.896,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+5174.610,1.920,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+5176.946,12.864,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+5190.226,1.280,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+5192.050,1.856,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+5194.322,1.376,10,64,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_4
+5196.082,103.328,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+5299.730,40.544,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+5340.722,3.264,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+5344.402,134.559,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+5479.217,134.432,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+5614.001,2.112,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+5616.497,140.672,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+5757.425,5.056,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+5762.865,40.575,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+5803.856,13.088,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+5817.360,2.048,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+5819.824,13.056,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+5833.360,1.344,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+5835.152,1.824,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+5837.392,103.040,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+5940.976,40.576,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+5982.000,2.784,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+5985.168,134.560,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+6119.984,134.591,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+6254.895,1.952,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+6257.295,140.448,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+6398.031,2.208,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+6400.655,40.672,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+6441.775,12.544,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+6454.735,1.792,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+6456.943,12.352,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+6469.775,1.280,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+6471.471,1.824,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+6473.711,102.815,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+6576.878,40.736,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+6618.062,3.680,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+6622.158,134.656,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+6757.070,134.464,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+6891.790,1.952,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+6894.126,140.703,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+7035.085,5.216,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+7040.685,40.800,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+7081.901,13.184,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+7095.501,1.920,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+7097.805,13.120,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+7111.405,1.344,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+7113.133,1.888,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+7115.437,103.136,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+7218.861,40.544,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+7259.853,2.848,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+7263.085,134.431,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+7397.772,134.592,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+7532.652,1.888,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+7534.956,137.664,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+7672.812,2.208,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+7675.436,40.543,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+7716.427,12.704,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+7729.547,1.824,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+7731.787,12.864,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+7745.131,1.312,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+7746.827,1.856,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+7749.099,1.280,10,64,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_4
+7750.795,102.976,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+7854.059,40.512,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+7894.987,3.072,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+7898.475,134.464,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+8033.291,134.495,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+8168.042,1.984,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+8170.410,140.256,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+8310.922,4.864,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+8316.202,40.768,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+8357.386,13.056,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+8370.858,1.888,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+8373.162,12.960,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+8386.570,1.344,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+8388.330,1.888,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+8390.826,103.711,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+8494.825,41.056,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+8536.329,2.784,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+8539.529,134.496,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+8674.345,132.640,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+8807.241,1.984,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+8809.577,139.135,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+8949.000,2.368,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+8951.784,39.648,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+8991.848,12.768,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+9005.032,1.888,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+9007.560,12.768,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+9020.776,1.280,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+9022.472,1.792,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+9024.680,102.208,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+9127.176,39.968,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+9167.560,3.072,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+9171.016,132.415,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+9303.655,132.128,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+9436.199,1.920,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+9438.535,139.904,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+9578.695,4.832,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+9584.007,39.775,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+9624.294,12.640,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+9637.350,1.920,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+9639.686,12.864,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+9652.998,1.312,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+9654.726,1.856,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+9656.998,104.000,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+9761.286,40.000,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+9801.702,2.816,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+9804.934,132.192,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+9937.414,132.543,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+10070.213,1.856,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+10072.485,138.976,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+10211.717,2.272,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+10214.629,39.936,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+10255.045,12.512,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+10267.941,1.824,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+10270.181,12.384,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+10283.013,1.280,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+10284.677,1.824,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+10286.917,1.280,10,64,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_4
+10288.613,102.911,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+10391.940,40.000,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+10432.356,3.104,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+10435.876,132.160,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+10568.292,132.352,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+10700.900,1.920,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+10703.236,139.775,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+10843.267,5.184,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+10848.867,39.872,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+10889.155,12.800,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+10902.371,1.856,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+10904.675,12.800,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+10918.083,1.344,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+10919.907,1.856,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+10922.179,103.264,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+11025.955,40.224,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+11066.595,2.656,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+11069.763,132.639,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+11202.658,132.288,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+11335.202,2.016,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+11337.634,136.480,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+11474.434,2.272,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+11477.122,40.224,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+11517.826,12.672,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+11530.914,1.855,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+11533.249,12.640,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+11546.337,1.312,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+11548.225,1.824,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+11550.433,103.168,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+11653.889,40.096,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+11694.593,2.944,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+11697.921,132.448,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+11830.593,132.351,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+11963.232,1.920,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+11965.536,138.784,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+12104.608,4.832,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+12109.856,40.448,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+12150.720,12.736,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+12163.872,1.856,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+12166.112,12.800,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+12179.360,1.280,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+12181.056,1.792,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+12183.264,103.392,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+12287.008,40.415,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+12327.839,2.848,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+12331.103,132.256,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+12463.583,132.160,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+12596.287,1.920,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+12598.623,138.783,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+12737.694,2.272,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+12740.382,39.968,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+12780.734,12.928,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+12794.078,2.048,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+12796.574,12.960,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+12810.110,1.312,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+12811.838,1.856,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+12814.142,1.408,10,64,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_4
+12815.934,102.432,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+12918.654,40.160,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+12959.198,3.008,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+12962.654,132.319,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+13095.261,132.256,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+13227.773,1.920,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+13230.109,139.840,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+13370.173,4.992,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+13375.581,40.192,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+13416.381,12.576,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+13429.405,1.760,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+13431.613,12.448,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+13444.541,1.280,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+13446.205,1.823,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+13448.444,102.912,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+13551.676,39.840,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+13591.932,2.816,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+13595.132,132.416,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+13727.868,132.479,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+13860.603,1.920,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+13862.939,138.400,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+14001.755,2.240,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+14004.411,40.032,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+14044.827,12.544,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+14057.787,1.888,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+14060.091,12.512,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+14073.051,1.312,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+14074.939,1.856,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+14077.339,102.880,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+14180.507,39.967,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+14220.922,3.168,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+14224.506,132.416,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+14357.210,132.544,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+14490.010,2.016,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+14492.378,139.551,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+14632.185,5.024,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+14637.817,40.064,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+14678.297,12.928,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+14691.801,1.888,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+14694.105,12.896,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+14707.449,1.280,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+14709.145,1.792,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+14711.353,104.480,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+14816.089,39.904,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+14856.377,2.656,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+14859.449,132.319,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+14992.216,132.064,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+15124.696,1.856,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+15127.000,136.224,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+15263.480,2.176,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+15266.104,39.904,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+15306.424,12.736,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+15319.576,1.888,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+15321.880,12.768,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+15335.096,1.312,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+15336.888,1.824,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+15339.160,1.312,10,64,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_4
+15340.888,102.719,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+15443.927,40.064,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+15484.439,3.040,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+15487.895,132.288,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+15620.599,132.479,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+15753.334,2.016,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+15755.734,138.976,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+15894.998,4.864,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+15900.278,39.872,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+15940.502,12.928,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+15953.846,1.824,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+15956.086,12.768,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+15969.334,1.248,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+15970.998,1.792,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+15973.206,104.160,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+16077.686,40.096,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+16118.198,2.656,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+16121.270,132.383,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+16253.877,132.160,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+16386.581,1.952,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+16388.949,139.167,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+16528.436,2.176,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+16531.028,39.968,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+16571.380,12.800,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+16584.596,1.856,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+16586.900,13.056,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+16600.436,1.312,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+16602.260,1.856,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+16604.532,103.168,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+16708.020,40.000,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+16748.628,3.008,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+16752.052,132.576,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+16884.884,132.255,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+17017.363,1.920,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+17019.699,139.648,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+17159.603,4.832,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+17164.819,39.840,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+17205.075,12.704,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+17218.195,1.792,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+17220.403,12.544,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+17233.427,1.280,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+17235.539,1.856,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+17237.811,102.623,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+17340.978,39.936,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+17381.330,2.848,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+17384.594,132.448,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+17517.298,132.288,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+17649.906,1.952,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+17652.274,138.815,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+17791.377,2.304,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+17794.161,39.904,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+17834.609,12.416,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+17847.441,1.888,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+17849.777,12.288,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+17862.545,1.312,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+17864.273,1.856,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+17866.545,1.312,10,64,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_4
+17868.209,103.104,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+17971.761,39.936,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+18012.113,3.104,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+18015.729,132.319,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+18148.464,132.320,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+18281.040,1.952,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+18283.408,140.191,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+18423.855,4.832,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+18429.103,40.224,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+18469.743,12.800,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+18482.959,1.824,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+18485.231,12.672,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+18498.383,1.280,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+18500.079,1.824,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+18502.287,103.552,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+18606.127,40.064,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+18646.671,2.688,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+18649.775,132.096,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+18782.287,132.255,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+18914.798,1.888,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+18917.102,138.080,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+19055.694,2.368,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_9
+19058.478,40.288,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+19099.150,12.512,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+19112.078,2.016,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+19114.510,12.672,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+19127.630,1.344,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+19129.390,1.824,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+19131.662,102.271,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+19234.253,39.840,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+19274.509,3.008,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_10
+19277.933,132.320,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+19410.541,132.256,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+19543.053,1.952,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+19545.421,139.391,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+19685.068,4.704,8,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_11
+19690.188,39.936,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+19730.540,12.736,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+19743.660,1.920,512,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+19745.996,12.832,256,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+19759.276,1.280,128,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+19760.972,1.792,256,1024,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+19763.180,103.456,256,128,attention,cudnn_generated_fort_native_sdpa_sm80_flash_fprop_wmma_f16_knob_2_16x128x128_1x4x1_cga1x1x1_kernel0_0
+19866.892,40.128,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+19907.436,2.528,32,512,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_12
+19910.380,132.351,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+20042.987,132.256,3584,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+20175.467,1.952,896,256,norm_rope_elementwise,triton_poi_fused_mul_silu_view_6
+20177.867,138.656,1024,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+20316.779,4.480,32,1024,norm_rope_elementwise,triton_red_fused__to_copy_add_mean_mul_pow_rsqrt_view_13
+20321.675,1131.933,32064,256,weight_gemm,"void at::native::tinygemm_m16n8k16_chunk_kernel<at::native::ALayout_RM<(at::native::KReductionType)0>, at::native::BLayout_TC_int4<(int)8, (int)128>, at::native::ALayout_RM<(at::native::KReductionType"
+21453.864,19.968,32,1024,sampling,triton_red_fused_argmax_select_view_14
+21479.208,1.280,1,128,norm_rope_elementwise,"void at::native::vectorized_elementwise_kernel<(int)2, at::native::CUDAFunctorOnSelf_add<long>, std::array<char *, (unsigned long)2>, (bool)0>(int, T2, T3)"
