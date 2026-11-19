@@ -18,7 +18,9 @@ e1)          # eager baselines, batch 1, 512-token prompt, 256 timed steps
 e1-profile)  # nsys timelines of 5 decode steps
   profiling/nsys_step.sh E1_hf_loop decode.hf_baseline --only loop --context $CTX --profile-steps 5
   profiling/nsys_step.sh E1_own_eager decode.run --mode eager --context $CTX --profile-steps 5
-  profiling/nsys_step.sh E1_own_eager_layers decode.run --mode eager --context $CTX --profile-steps 5 --nvtx-layers ;;
+  profiling/nsys_step.sh E1_own_eager_layers decode.run --mode eager --context $CTX --profile-steps 5 --nvtx-layers
+  # lighter capture (cuda,nvtx only), used for the eager timeline charts: less profiler overhead per launch
+  NSYS_TRACE=cuda,nvtx profiling/nsys_step.sh E1_own_eager_light decode.run --mode eager --context $CTX --profile-steps 5 ;;
 e2-ncu)      # hardware counters: every kernel of one step (light), then deep dives
   profiling/ncu_kernel.sh step E2_step_all decode.run --mode eager --context $CTX --profile-steps 1 --nvtx-layers
   # matmul kernel names vary by cuBLAS version (gemv / gemm / nvjet / xmma / cutlass): check nsys first
