@@ -6,7 +6,7 @@ millisecond of the gap goes: CPU launch gaps, CUDA graphs and fusion, weight and
 quantization, the fixed cost of every kernel, and a vLLM reference.
 
 - **Post 1, H100:** [Where does decode time go? (Medium)](https://medium.com/@ayushgarg70/where-does-decode-time-go-profiling-llama-3-1-8b-on-an-h100-token-by-token-c3afbe77a459) · Full write-up: [`notes/REPORT.md`](notes/REPORT.md) · Every number with its run ID: [`notes/RESULTS.md`](notes/RESULTS.md)
-- **Post 2, B200:** Twice the bandwidth, not twice the speed · Full write-up: [`notes/REPORT_B200.md`](notes/REPORT_B200.md) · Every number with its run ID: [`notes/RESULTS_B200.md`](notes/RESULTS_B200.md)
+- **Post 2, B200:** [Twice the bandwidth, not twice the speed (Medium)](https://medium.com/@ayushgarg70/twice-the-bandwidth-not-twice-the-speed-decode-on-blackwell-916ece024c40) · Full write-up: [`notes/REPORT_B200.md`](notes/REPORT_B200.md) · Every number with its run ID: [`notes/RESULTS_B200.md`](notes/RESULTS_B200.md)
 
 ![GPU timelines of one decode step, launched four ways](figures/timeline.png)
 

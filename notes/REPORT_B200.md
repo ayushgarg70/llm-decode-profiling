@@ -1,6 +1,8 @@
 # Post 2: does it hold on Blackwell? (B200)
 
-Branch `blackwell` only, until post 1 is published. Same code, same method as post 1 (`notes/REPORT.md`);
+Published as [Twice the bandwidth, not twice the speed: decode on Blackwell](https://medium.com/@ayushgarg70/twice-the-bandwidth-not-twice-the-speed-decode-on-blackwell-916ece024c40).
+
+Same code, same method as post 1 (`notes/REPORT.md`);
 run list `runs/b1.sh`; experiment IDs B0–B4 in `data/results.csv` (the `gpu` column separates them).
 
 ## Predictions (written before renting; from `analysis/predict.py`, B200 datasheet ~7.7 TB/s, ~2.25 PFLOPS BF16)
