@@ -31,3 +31,14 @@ def test_step_csv_well_formed(path):
 def test_eager_step_matches_the_report():
     ks = _step_kernels("E1_own_eager_light")
     assert len(ks) == 1583  # kernels per eager step (E2)
+
+
+def test_h100_vs_b200_roles():
+    """Matmul roles are assigned by position: every layer has q, k, v, o, gate, up, down, then lm_head once."""
+    from analysis import results_table as rt
+
+    rows = {r["key"]: r for r in rt.compare_rows()}
+    for gpu in ("H100", "B200"):
+        # the biggest matmul is lm_head and the MLP matmuls are ~4x the k/v projections' bytes: check the order holds
+        assert rows["lm_head"][f"{gpu}_us"] > rows["mlp"][f"{gpu}_us"] > rows["q"][f"{gpu}_us"] > rows["kv"][f"{gpu}_us"]
+        assert rows["mlp"][f"{gpu}_extra"] > 0

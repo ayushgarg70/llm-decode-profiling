@@ -11,8 +11,8 @@ mkdir -p data traces reports
 # The VM's CSVs only hold what that VM produced (push.sh never sends data/), so they are MERGED into the
 # Mac's copies row by row, never copied over them.
 TMP=$(mktemp -d); trap 'rm -rf "$TMP"' EXIT
-rsync -az --include='results.csv' --include='ceilings.csv' --include='ppl.csv' --exclude='*' "$HOST:~/decode-profiling/data/" "$TMP/"
-for f in results.csv ceilings.csv ppl.csv; do
+rsync -az --include='results.csv' --include='ceilings.csv' --include='ppl.csv' --include='fixed_cost.csv' --exclude='*' "$HOST:~/decode-profiling/data/" "$TMP/"
+for f in results.csv ceilings.csv ppl.csv fixed_cost.csv; do
   [ -f "$TMP/$f" ] && python3 scripts/merge_csv.py "$TMP/$f" "data/$f"
 done
 rsync -az --include='ceilings.json' --include='ceilings_*.json' --include='telemetry/***' --include='env/***' \

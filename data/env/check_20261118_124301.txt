@@ -1,0 +1,77 @@
+
+=== 1. GPU, driver, clocks, power ===
+name, pci.bus_id, driver_version, memory.total [MiB], power.limit [W], clocks.max.sm [MHz], clocks.max.memory [MHz]
+NVIDIA B200, 00000000:8D:00.0, 580.173.02, 183359 MiB, 1000.00 W, 1965 MHz, 3996 MHz
++-----------------------------------------+------------------------+----------------------+
+
+==============NVSMI LOG==============
+
+Timestamp                                              : Wed Nov 18 12:43:01 2026
+Driver Version                                         : 580.173.02
+CUDA Version                                           : 13.0
+
+Attached GPUs                                          : 1
+GPU 00000000:8D:00.0
+    Clocks
+        Graphics                                       : 120 MHz
+        SM                                             : 120 MHz
+        Memory                                         : 3996 MHz
+        Video                                          : 600 MHz
+    Applications Clocks
+        Graphics                                       : 1965 MHz
+        Memory                                         : 3996 MHz
+    Default Applications Clocks
+        Graphics                                       : 1965 MHz
+        Memory                                         : 3996 MHz
+    Deferred Clocks
+        Memory                                         : N/A
+    Max Clocks
+        Graphics                                       : 1965 MHz
+        SM                                             : 1965 MHz
+        Memory                                         : 3996 MHz
+        Video                                          : 1965 MHz
+    Max Customer Boost Clocks
+        Graphics                                       : 1965 MHz
+    SM Clock Samples
+        Duration                                       : N/A
+        Number of Samples                              : N/A
+        Max                                            : N/A
+        Min                                            : N/A
+        Avg                                            : N/A
+    Memory Clock Samples
+        Duration                                       : N/A
+        Number of Samples                              : N/A
+        Max                                            : N/A
+        Min                                            : N/A
+        Average Power Draw                             : 145.86 W
+        Instantaneous Power Draw                       : 146.33 W
+        Current Power Limit                            : 1000.00 W
+        Requested Power Limit                          : 1000.00 W
+        Default Power Limit                            : 1000.00 W
+        Min Power Limit                                : 200.00 W
+        Max Power Limit                                : 1000.00 W
+        Average Power Draw                             : 20.42 W
+6.11.0-1016-nvidia
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+scripts/check_gpu.sh: line 23: uv: command not found
+scripts/check_gpu.sh: line 25: uv: command not found
+
+=== 2. Nsight tools ===
+nsys: /usr/local/bin/nsys
+NVIDIA Nsight Systems version 2025.3.2.474-253236389321v0
+ncu: /opt/nvidia/nsight-compute/2025.3.1/ncu
+Version 2025.3.1.0 (build 36398880) (public-release)
+RmProfilingAdminOnly (1 = only root may read counters):
+RmProfilingAdminOnly: 0
+
+=== 3. ncu hardware counters ===
+==PROF== Profiling "reduce_kernel": 0%....50%....100% - 1 pass
+  void reduce_kernel<512, 1, ReduceOp<BFloat16, func_wrapper_t<BFloat16, sum_functor<BFloat16, float, BFloat16>::operator ()(TensorIterator &)::[lambda(float, float) (instance 1)]>, unsigned int, BFloat16, 4, 8>>(T3) (1, 592, 1)x(512, 1, 1), Context 1, Stream 7, Device 0, CC 10.0
+    dram__throughput.avg.pct_of_peak_sustained_elapsed           %        45.59
+    gpu__time_duration.sum                                      us        39.39
+RESULT: ncu works as normal user.
+
+=== 4. nsys trace ===
+RESULT: nsys works (224K report)
+
+Saved to data/env/check_20261118_124301.txt

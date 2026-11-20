@@ -57,9 +57,9 @@ def elapsed_ms(fn, device) -> float:
 
 
 def floor_ms(model, batch, context):
-    from analysis.predict import ModelShape, floor_ms as f, load_ceilings
+    from analysis.predict import ModelShape, current_ceilings, floor_ms as f
 
-    ceilings, _ = load_ceilings("data/ceilings.json", "H100-SXM")
+    ceilings, _ = current_ceilings()
     return f(ModelShape.from_config(model.config.to_dict()), batch, context, ceilings["bandwidth_Bps"])
 
 

@@ -3,9 +3,9 @@
 
 ## E0 ceilings
 
-| read, x.sum() TB/s | read, row-sum TB/s | copy TB/s | roof TB/s | roof kernel | BF16 matmul TFLOP/s | ridge FLOP/B | run |
-|---|---|---|---|---|---|---|---|
-| 3.080 | 3.154 | 3.045 | 3.154 | row-sum | 797.2 | 253 | 20261118-132534 |
+| read, x.sum() TB/s | read, row-sum TB/s | copy TB/s | GEMV TB/s | roof TB/s | roof kernel | BF16 matmul TFLOP/s | ridge FLOP/B | run |
+|---|---|---|---|---|---|---|---|---|
+| 3.080 | 3.154 | 3.045 | nan | 3.154 | row-sum | 797.2 | 253 | 20261118-132534 |
 
 ## E1
 

@@ -51,3 +51,27 @@ def test_perplexity_windows_and_value():
     model = tiny()
     nll, n = perplexity(model, windows_of(torch.randint(0, 256, (64,)), 16, None, None), torch.device("cpu"))
     assert n == 4 * 15 and 0 < nll < 2 * math.log(256)
+
+
+def test_nvfp4_weight_only_bytes_and_logits():
+    """NVFP4 = 4-bit values + one FP8 scale per 16 weights (+ a per-tensor scale): ~0.5625 B/weight."""
+    ref, q = tiny(), tiny()
+    quantize(q, "nvfp4w")
+    w = q.lm_head.weight
+    assert abs(tensor_bytes(w) / w.shape.numel() - 0.5625) < 0.01
+    x = torch.randint(0, TINY_CONFIG["vocab_size"], (1, 16))
+    pos = torch.arange(16)
+    for m in (ref, q):
+        m.setup_caches(1, 16)
+    with torch.no_grad():
+        a, b = ref(x, pos), q(x, pos)
+    assert torch.nn.functional.cosine_similarity(a.flatten(), b.flatten(), dim=0) > 0.98
+
+
+def test_nvfp4_w4a4_needs_blackwell():
+    import pytest
+
+    if torch.cuda.is_available() and torch.cuda.get_device_capability()[0] >= 10:
+        pytest.skip("on Blackwell: exercised by runs/b1.sh instead")
+    with pytest.raises(Exception):
+        quantize(tiny(), "nvfp4")

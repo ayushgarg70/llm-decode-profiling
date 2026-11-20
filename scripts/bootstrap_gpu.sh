@@ -28,7 +28,7 @@ vllm)
   # Triton (used by vLLM) compiles a C helper at start-up and needs the Python headers.
   sudo apt-get update -qq && sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq python3.12-dev
   [ -d .venv-vllm ] || uv venv .venv-vllm --python 3.12
-  uv pip install --python .venv-vllm/bin/python vllm pandas
+  uv pip install --python .venv-vllm/bin/python "vllm${VLLM_VERSION:+==$VLLM_VERSION}" pandas
   .venv-vllm/bin/python -c "import vllm, torch; print('vllm', vllm.__version__, '| torch', torch.__version__)"
   ;;
 model)

@@ -9,7 +9,7 @@ Kernels are matched to the step by correlation ID with the CPU-side launches ins
 Columns: start_us (from the step's first kernel), dur_us, grid (blocks), block (threads), group
 (analysis/group_kernels.py), kernel (demangled name, cut at 200 characters).
 
-    uv run python -m analysis.extract_steps                      # every traces/E*.sqlite, step 2
+    uv run python -m analysis.extract_steps                      # every traces/E*.sqlite and B*.sqlite, step 2
     uv run python -m analysis.extract_steps traces/E6_fp8_B1.sqlite --step 3
 """
 
@@ -44,11 +44,11 @@ def step_kernels(sqlite_path: str, step: int) -> list[dict]:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("traces", nargs="*", help="traces/<name>.sqlite (default: every traces/E*.sqlite)")
+    ap.add_argument("traces", nargs="*", help="traces/<name>.sqlite (default: every traces/E*.sqlite and B*.sqlite)")
     ap.add_argument("--step", type=int, default=2)
     args = ap.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
-    for t in args.traces or sorted(map(str, Path("traces").glob("E*.sqlite"))):
+    for t in args.traces or sorted(str(p) for g in ("E*.sqlite", "B*.sqlite") for p in Path("traces").glob(g)):
         ks = step_kernels(t, args.step)
         out = OUT / f"{Path(t).stem}_step{args.step}.csv"
         with out.open("w", newline="") as f:

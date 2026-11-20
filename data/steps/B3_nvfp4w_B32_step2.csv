@@ -1,0 +1,823 @@
+start_us,dur_us,grid,block,group,kernel
+0.000,1.856,2,512,other,"void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::TensorListMetadata<(int)2>, at::native::<unnamed>::UnaryOpFunctor<long, (int)2, (int)1, (int)1>, at::native::Copy<long, lon"
+4.416,3.680,32,256,norm_rope_elementwise,triton_red_fused__to_copy_add_embedding_mean_mul_pow_rsqrt_0
+8.256,26.527,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+34.784,9.184,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+44.000,8.160,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+51.776,4.608,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+55.808,2.336,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+58.176,2.112,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+60.160,8.192,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+67.872,4.736,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+72.032,2.304,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+74.208,1.728,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+75.808,2.016,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+77.696,1.696,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+79.296,55.775,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+135.072,4.384,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+139.200,26.656,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+166.016,9.184,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+175.104,2.720,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_embedding_mean_mul_pow_rsqrt_7
+177.696,89.089,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+266.529,20.480,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+286.881,88.992,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+375.745,20.768,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+396.257,88.704,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+484.833,2.464,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+486.849,20.672,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+505.889,3.680,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+509.473,3.040,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_embedding_mean_mul_pow_rsqrt_11
+512.417,26.592,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+539.041,9.248,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+548.161,8.320,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+555.969,4.640,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+559.905,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+562.177,1.824,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+564.033,7.872,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+571.553,4.320,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+575.233,2.272,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+577.537,1.568,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+579.169,1.664,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+580.865,58.303,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+639.169,3.905,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+642.946,26.559,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+669.506,9.056,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+678.594,5.280,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_embedding_mean_mul_pow_rsqrt_12
+683.906,88.672,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+772.770,20.928,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+793.378,89.119,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+882.498,20.512,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+902.722,88.672,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+991.106,2.656,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+993.186,21.024,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+1012.674,3.328,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+1015.906,2.688,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+1018.466,26.752,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+1045.346,9.280,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+1054.530,8.160,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+1062.178,4.673,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+1066.147,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+1068.419,1.792,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+1070.243,8.064,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+1077.955,4.288,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+1081.635,2.272,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+1083.939,1.536,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+1085.507,1.728,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+1087.267,1.568,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+1088.867,58.560,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+1147.587,3.840,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+1151.331,26.432,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+1177.923,8.864,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+1186.819,2.495,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+1189.315,88.960,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+1278.435,21.120,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+1299.299,88.896,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+1388.067,20.672,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+1408.483,88.417,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+1496.644,2.528,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+1498.596,20.992,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+1518.180,3.040,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+1521.284,4.832,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+1526.148,26.400,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+1552.580,8.928,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+1561.540,8.128,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+1569.284,4.512,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+1573.380,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+1575.492,1.984,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+1577.348,7.968,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+1584.772,4.640,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+1588.836,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+1590.948,1.696,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+1592.548,1.856,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+1594.308,58.368,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+1652.708,4.032,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+1656.484,26.624,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+1683.140,8.992,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+1692.004,6.144,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+1698.020,89.024,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+1786.756,20.544,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+1807.172,89.088,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+1896.132,20.481,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+1916.389,88.448,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+2004.709,2.528,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+2006.821,21.472,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+2026.757,2.944,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+2029.765,2.528,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+2032.325,26.495,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+2058.821,9.184,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+2068.037,7.968,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+2075.685,4.448,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+2079.781,2.176,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+2081.861,1.952,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+2083.717,8.192,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+2091.301,4.416,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+2095.141,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+2097.253,1.728,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+2098.853,1.824,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+2100.581,1.664,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+2102.181,58.368,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+2160.581,4.000,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+2164.325,26.528,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+2190.885,9.024,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+2199.813,2.496,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+2202.181,88.832,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+2290.885,21.344,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+2312.133,88.833,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+2400.838,21.344,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+2422.054,88.352,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+2510.310,2.336,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+2512.230,21.184,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+2532.006,3.232,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+2535.142,4.672,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+2539.718,26.592,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+2566.342,9.152,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+2575.366,8.160,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+2583.014,4.512,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+2586.950,2.272,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+2589.254,2.112,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+2591.398,8.000,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+2599.014,4.320,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+2602.758,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+2604.998,1.568,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+2606.598,1.696,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+2608.358,59.712,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+2668.006,3.872,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+2671.782,26.463,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+2698.246,9.056,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+2707.334,6.336,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+2713.702,88.833,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+2802.439,20.384,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+2822.535,89.344,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+2911.751,20.128,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+2931.591,88.640,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+3019.975,2.560,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+3021.959,21.088,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+3041.671,3.104,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+3044.679,2.720,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+3047.271,26.592,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+3074.023,9.120,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+3083.015,8.256,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+3090.759,4.480,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+3094.727,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+3096.967,1.888,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+3098.887,7.872,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+3106.407,4.480,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+3110.311,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+3112.551,1.568,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+3114.151,1.696,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+3115.879,1.536,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+3117.479,57.280,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+3174.919,3.904,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+3178.727,26.529,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+3205.288,8.864,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+3214.184,2.752,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+3216.840,89.088,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+3306.088,21.120,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+3326.920,89.024,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+3415.848,20.416,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+3436.008,88.576,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+3524.328,2.464,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+3526.344,21.568,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+3546.696,2.912,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+3549.640,4.928,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+3554.600,26.335,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+3580.936,8.864,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+3589.832,8.288,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+3597.640,4.576,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+3601.736,2.176,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+3603.816,1.920,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+3605.640,8.161,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+3613.065,4.704,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+3617.161,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+3619.273,1.728,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+3620.873,1.824,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+3622.601,58.112,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+3680.745,3.968,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+3684.489,26.655,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+3711.145,9.344,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+3720.361,6.208,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+3726.601,88.704,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+3815.177,20.864,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+3835.945,88.736,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+3924.585,20.384,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+3944.841,88.480,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+4033.193,2.624,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+4035.209,21.761,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+4055.530,3.136,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+4058.538,2.752,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+4061.194,26.496,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+4087.722,8.928,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+4096.522,8.000,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+4104.170,4.480,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+4108.138,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+4110.378,1.824,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+4112.234,8.000,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+4119.850,4.384,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+4123.626,2.272,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+4125.930,1.536,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+4127.498,1.696,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+4129.226,1.568,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+4130.826,57.984,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+4189.034,3.904,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+4192.810,26.304,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+4219.274,9.216,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+4228.362,2.560,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+4230.794,89.088,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+4320.042,20.768,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+4340.586,88.992,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+4429.706,20.864,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+4450.122,88.705,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+4538.507,2.496,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+4540.555,20.544,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+4559.819,3.072,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+4562.923,4.704,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+4567.659,26.400,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+4594.219,8.992,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+4603.083,8.352,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+4610.923,4.672,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+4615.051,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+4617.163,1.952,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+4619.019,8.000,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+4626.507,4.448,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+4630.379,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+4632.491,1.696,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+4634.059,1.856,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+4635.819,58.080,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+4693.931,4.000,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+4697.675,26.656,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+4724.171,9.088,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+4733.291,6.464,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+4739.787,88.543,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+4828.331,21.056,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+4849.291,88.801,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+4937.996,20.928,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+4958.604,88.448,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+5046.956,2.432,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+5048.940,21.312,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+5068.972,2.976,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+5072.012,2.496,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+5074.540,26.464,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+5101.164,9.024,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+5110.060,8.192,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+5117.772,4.608,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+5121.932,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+5124.044,1.984,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+5125.900,8.064,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+5133.484,4.416,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+5137.356,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+5139.468,1.696,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+5141.068,1.856,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+5142.796,1.696,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+5144.396,58.496,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+5202.924,4.032,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+5206.732,26.624,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+5233.228,9.184,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+5242.444,2.304,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+5244.780,88.961,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+5333.613,20.384,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+5353.869,88.768,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+5442.797,20.832,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+5463.277,88.512,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+5551.533,2.528,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+5553.485,21.120,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+5573.005,3.360,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+5576.269,5.024,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+5581.165,26.752,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+5607.757,9.184,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+5616.973,7.904,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+5624.525,4.544,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+5628.557,2.176,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+5630.765,1.824,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+5632.621,7.904,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+5640.173,4.288,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+5643.885,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+5646.157,1.536,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+5647.725,1.696,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+5649.485,58.144,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+5707.821,3.872,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+5711.597,26.689,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+5738.478,8.992,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+5747.374,6.560,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+5753.806,89.120,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+5843.086,21.056,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+5863.854,89.536,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+5953.102,20.608,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+5973.422,88.800,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+6061.966,2.688,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+6064.078,21.056,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+6083.502,3.424,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+6086.830,2.592,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+6089.294,26.592,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+6115.758,9.023,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+6124.782,7.936,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+6132.366,4.544,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+6136.366,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+6138.638,1.920,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+6140.590,7.872,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+6148.110,4.320,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+6151.950,2.112,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+6154.094,1.568,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+6155.694,1.664,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+6157.422,1.536,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+6159.022,57.825,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+6217.007,3.904,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+6220.783,26.720,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+6247.663,9.248,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+6256.815,2.528,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+6259.247,89.088,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+6348.495,21.376,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+6369.615,88.896,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+6458.255,20.832,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+6478.959,88.544,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+6567.247,2.432,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+6569.231,21.249,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+6589.104,3.200,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+6592.336,4.416,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+6596.784,26.496,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+6623.472,9.280,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+6632.624,8.160,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+6640.240,4.832,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+6644.528,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+6646.640,2.432,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+6648.944,7.936,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+6656.368,4.448,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+6660.240,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+6662.352,1.728,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+6663.952,1.856,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+6665.680,58.560,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+6724.496,4.000,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+6728.240,26.431,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+6754.672,8.832,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+6763.536,6.208,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+6769.776,88.800,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+6858.448,21.120,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+6879.440,89.280,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+6968.368,20.960,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+6989.200,88.705,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+7077.777,2.496,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+7079.857,21.120,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+7099.825,2.880,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+7102.737,2.592,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+7105.361,26.528,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+7132.049,9.280,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+7141.233,8.096,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+7148.817,4.672,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+7152.913,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+7155.057,1.984,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+7156.913,8.032,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+7164.465,4.480,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+7168.305,2.272,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+7170.481,1.696,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+7172.081,1.856,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+7173.809,1.888,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+7175.601,57.984,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+7233.617,3.968,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+7237.489,26.624,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+7264.305,8.928,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+7273.265,2.496,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+7275.825,88.864,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+7364.529,20.544,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+7384.945,88.929,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+7474.034,20.896,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+7494.642,88.672,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+7582.962,2.560,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+7584.914,21.056,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+7604.434,3.328,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+7607.634,4.736,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+7612.434,26.463,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+7638.898,9.024,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+7647.954,7.872,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+7655.474,4.448,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+7659.378,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+7661.650,1.824,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+7663.538,7.904,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+7671.090,4.320,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+7674.834,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+7677.074,1.568,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+7678.674,1.664,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+7680.370,58.176,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+7738.706,4.032,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+7742.482,26.655,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+7769.138,9.248,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+7778.258,6.656,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+7784.786,88.897,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+7873.843,20.576,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+7894.131,89.088,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+7983.123,20.384,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+8003.251,88.480,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+8091.475,2.656,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+8093.555,21.152,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+8112.979,3.360,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+8116.243,2.528,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+8118.803,26.528,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+8145.363,8.992,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+8154.387,8.064,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+8162.099,4.480,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+8166.035,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+8168.307,1.823,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+8170.131,7.872,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+8177.619,4.320,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+8181.363,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+8183.603,1.568,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+8185.203,1.696,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+8186.931,1.536,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+8188.531,59.328,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+8247.891,4.032,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+8251.667,26.528,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+8278.355,9.057,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+8287.316,2.752,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+8289.972,89.184,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+8379.316,20.672,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+8399.892,88.704,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+8488.436,20.608,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+8508.948,88.384,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+8597.236,2.496,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+8599.284,20.768,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+8618.644,3.392,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+8621.908,4.864,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+8626.644,26.528,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+8653.332,9.024,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+8662.228,8.256,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+8669.876,4.640,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+8673.972,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+8676.084,1.984,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+8677.940,7.968,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+8685.396,4.480,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+8689.300,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+8691.412,1.728,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+8693.012,1.824,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+8694.740,57.665,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+8752.597,4.032,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+8756.373,26.367,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+8782.741,9.279,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+8792.021,6.112,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+8798.165,88.768,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+8886.773,20.448,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+8907.093,88.800,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+8995.733,20.416,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+9016.021,88.320,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+9104.245,2.528,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+9106.325,20.800,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+9125.813,3.264,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+9128.949,2.688,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+9131.509,26.689,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+9158.390,8.896,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+9167.190,8.128,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+9174.806,4.640,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+9178.902,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+9181.014,2.208,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+9183.126,8.064,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+9190.678,4.448,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+9194.550,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+9196.662,1.696,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+9198.262,1.824,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+9199.990,1.536,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+9201.558,58.816,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+9260.566,3.872,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+9264.342,26.464,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+9290.998,8.992,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+9300.022,2.528,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+9302.582,88.960,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+9391.702,20.608,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+9412.022,89.344,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+9501.238,20.544,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+9521.526,88.641,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+9609.911,2.560,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+9611.895,21.376,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+9631.863,2.912,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+9634.839,4.800,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+9639.703,26.399,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+9666.103,8.800,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+9674.935,8.064,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+9682.615,4.544,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+9686.743,2.080,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+9688.855,2.207,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+9691.063,7.904,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+9698.583,4.288,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+9702.295,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+9704.599,1.536,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+9706.167,1.824,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+9707.895,58.528,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+9766.583,4.032,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+9770.359,26.655,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+9797.015,9.184,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+9806.103,5.888,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+9811.895,88.736,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+9900.791,20.864,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+9921.399,89.057,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+10010.360,20.640,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+10030.744,88.512,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+10119.000,2.560,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+10120.952,21.088,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+10140.696,2.944,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+10143.672,2.399,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+10146.072,26.687,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+10172.760,8.832,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+10181.624,8.096,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+10189.368,4.480,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+10193.336,2.176,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+10195.544,2.176,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+10197.752,7.904,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+10205.304,4.384,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+10208.984,2.368,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+10211.384,1.536,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+10212.984,1.792,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+10214.680,1.696,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+10216.280,58.560,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+10274.616,4.032,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+10278.392,26.656,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+10305.208,9.344,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+10314.456,2.528,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+10316.856,88.928,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+10405.656,21.185,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+10426.681,88.992,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+10515.545,20.640,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+10536.057,88.544,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+10624.473,2.528,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+10626.585,21.600,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+10646.905,3.008,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+10649.817,4.800,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+10654.489,26.559,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+10681.049,9.216,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+10690.137,8.160,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+10697.785,4.640,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+10701.881,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+10703.993,1.952,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+10705.849,8.032,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+10713.369,4.448,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+10717.241,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+10719.353,1.568,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+10720.953,1.696,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+10722.713,58.336,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+10781.241,3.872,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+10785.017,26.559,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+10811.577,8.896,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+10820.505,5.984,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+10826.521,88.961,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+10915.354,20.416,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+10935.674,88.864,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+11024.410,20.704,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+11044.954,88.416,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+11133.274,2.688,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+11135.322,21.024,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+11154.874,3.296,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+11158.042,2.560,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+11160.506,26.560,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+11187.258,9.248,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+11196.378,8.096,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+11203.962,4.672,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+11208.058,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+11210.202,1.952,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+11212.026,8.064,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+11219.578,4.672,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+11223.674,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+11225.786,1.568,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+11227.386,1.664,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+11229.082,1.536,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+11230.682,58.049,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+11288.923,3.872,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+11292.667,26.495,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+11319.163,9.088,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+11328.283,2.528,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+11330.715,89.248,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+11420.123,20.928,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+11440.635,89.088,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+11529.595,20.736,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+11550.075,88.640,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+11638.427,2.464,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+11640.443,21.184,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+11660.347,2.912,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+11663.323,4.928,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+11668.283,26.496,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+11694.780,9.152,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+11703.964,8.000,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+11711.612,4.576,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+11715.580,2.272,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+11717.884,1.920,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+11719.836,8.000,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+11727.484,4.288,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+11731.356,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+11733.436,1.728,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+11735.036,1.856,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+11736.796,58.880,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+11795.708,4.032,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+11799.452,26.655,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+11826.108,9.056,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+11835.036,6.272,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+11841.340,88.928,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+11930.012,20.544,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+11950.428,88.992,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+12039.292,20.704,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+12059.868,88.417,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+12148.157,2.688,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+12150.237,21.312,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+12170.141,3.104,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+12173.149,2.624,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+12175.677,26.751,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+12202.429,9.280,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+12211.613,8.128,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+12219.229,4.608,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+12223.293,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+12225.405,2.048,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+12227.357,8.224,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+12235.069,4.608,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+12239.037,2.112,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+12241.181,1.568,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+12242.781,1.664,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+12244.509,1.536,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+12246.109,58.080,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+12304.349,4.064,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+12308.093,26.496,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+12334.781,8.960,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+12343.645,2.432,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+12345.981,89.280,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+12435.421,20.704,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+12455.837,89.249,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+12544.734,20.704,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+12565.150,88.608,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+12653.630,2.464,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+12655.646,21.120,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+12675.550,2.944,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+12678.526,4.704,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+12683.262,26.368,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+12709.790,8.992,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+12718.814,8.000,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+12726.430,4.480,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+12730.366,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+12732.638,1.824,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+12734.494,7.776,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+12741.886,4.448,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+12745.918,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+12748.030,1.696,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+12749.630,1.824,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+12751.326,59.200,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+12810.814,4.000,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+12814.558,26.560,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+12841.310,9.088,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+12850.302,6.592,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+12856.798,89.280,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+12946.270,20.513,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+12966.527,89.408,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+13055.807,20.448,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+13075.967,88.672,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+13164.511,2.272,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+13166.335,21.376,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+13186.495,2.912,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+13189.439,2.528,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+13191.999,26.432,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+13218.591,9.024,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+13227.647,8.032,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+13235.327,4.512,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+13239.263,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+13241.535,1.824,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+13243.391,7.808,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+13250.815,4.320,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+13254.655,2.272,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+13256.799,1.760,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+13258.431,1.824,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+13260.159,1.888,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+13261.919,58.528,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+13320.479,4.000,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+13324.255,26.560,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+13350.687,8.864,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+13359.583,2.528,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+13362.143,88.801,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+13450.784,20.768,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+13471.168,89.024,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+13560.352,20.928,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+13581.024,88.416,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+13669.184,2.720,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+13671.328,21.024,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+13690.880,3.264,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+13694.048,4.704,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+13698.624,26.464,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+13725.248,8.896,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+13734.048,8.160,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+13741.696,4.640,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+13745.792,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+13747.904,1.952,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+13749.728,8.032,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+13757.248,4.480,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+13761.152,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+13763.424,1.568,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+13765.024,1.664,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+13766.752,58.241,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+13825.185,3.904,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+13828.961,26.367,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+13855.329,9.216,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+13864.577,5.632,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+13870.241,88.672,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+13958.785,20.416,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+13979.073,88.959,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+14068.033,21.152,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+14088.929,88.608,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+14177.281,2.592,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+14179.297,21.184,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+14198.945,3.264,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+14202.113,2.688,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+14204.673,26.592,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+14231.425,8.929,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+14240.258,8.064,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+14247.842,4.672,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+14251.970,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+14254.082,2.144,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+14256.130,7.968,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+14263.618,4.256,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+14267.266,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+14269.538,1.536,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+14271.106,1.695,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+14272.802,1.568,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+14274.434,58.144,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+14332.930,3.872,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+14336.674,26.528,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+14363.234,9.184,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+14372.290,2.560,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+14374.722,88.928,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+14463.810,21.344,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+14484.802,89.055,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+14573.858,20.448,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+14594.210,88.353,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+14682.435,2.528,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+14684.515,20.928,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+14703.811,3.552,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+14707.395,4.704,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+14712.131,26.431,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+14738.563,8.864,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+14747.459,7.968,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+14755.075,4.544,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+14759.043,2.240,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+14761.315,1.823,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+14763.139,7.936,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+14770.563,4.704,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+14774.755,2.144,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+14776.803,1.696,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+14778.403,1.824,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+14780.131,58.912,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+14839.107,4.032,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+14842.883,26.847,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+14869.731,9.248,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+14878.851,5.760,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+14884.483,88.928,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+14973.571,20.832,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+14994.147,89.217,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+15083.076,20.576,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+15103.556,88.512,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+15191.748,2.464,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+15193.764,21.120,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+15213.636,2.944,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+15216.612,2.432,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_13
+15219.076,26.400,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+15245.508,9.120,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+15254.660,8.000,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+15262.276,4.512,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+15266.436,2.016,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+15268.484,2.239,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+15270.724,8.192,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+15278.404,4.448,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+15282.276,2.176,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+15284.388,1.696,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+15285.956,1.856,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+15287.684,1.696,10,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_6
+15289.284,57.600,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+15346.916,3.904,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+15350.692,26.495,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+15377.188,8.864,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+15386.084,2.304,32,512,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_14
+15388.452,88.832,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+15477.444,21.024,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+15498.340,89.153,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+15587.397,20.864,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+15607.813,88.576,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+15696.133,2.496,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+15698.085,21.056,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+15717.701,3.200,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+15720.805,4.992,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_15
+15725.669,26.592,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+15752.421,8.960,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+15761.285,8.128,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+15768.933,4.640,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+15773.125,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+15775.205,2.176,256,128,kv_cache_write,triton_poi_fused__unsafe_view_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_3
+15777.413,7.936,4096,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_2
+15784.965,4.352,64,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_splitK_TNN
+15788.741,2.208,64,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+15790.981,1.568,128,128,kv_cache_write,triton_poi_fused__unsafe_view_index_copy_transpose_view_4
+15792.613,1.632,128,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention__unsafe_view_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_5
+15794.309,58.144,1280,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+15852.645,4.032,1024,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+15856.421,26.720,16384,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_1
+15883.301,9.024,128,256,weight_gemm,nvjet_sm100_tst_32x64_64x16_4x1_v_bz_TNN
+15892.197,6.560,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_16
+15898.629,88.929,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+15987.718,20.448,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+16007.910,88.992,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_8
+16096.742,20.736,112,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_4x1_2cta_v_bz_TNT
+16117.382,88.608,57344,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_9
+16205.862,2.496,896,256,norm_rope_elementwise,triton_poi_fused__unsafe_view_mul_silu_10
+16207.942,20.608,128,256,weight_gemm,nvjet_sm100_tst_64x32_64x16_2x1_2cta_v_bz_splitK_TNT
+16227.238,3.104,256,512,weight_gemm,"void cublasLt::splitKreduce_kernel<(int)32, (int)16, int, float, __nv_bfloat16, float, __nv_bfloat16, (bool)0, float, __nv_bfloat16, __nv_bfloat16, (bool)1, (bool)0, (bool)0, (bool)0>(cublasLt::cublas"
+16230.374,3.840,32,256,norm_rope_elementwise,triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_17
+16234.246,776.354,513024,128,norm_rope_elementwise,triton_poi_fused___lshift_____rshift____to_copy__unsafe_view_add_bitwise_and_bitwise_or_bitwise_xor_clone_eq_gt_logical_and_masked_fill_mul_permute_stack_sub_transpose_view_18
+17010.472,178.880,1002,256,weight_gemm,nvjet_sm100_tst_128x32_64x11_2x1_2cta_v_bz_TNT
+17189.000,61.793,32,256,sampling,triton_red_fused__unsafe_view_argmax_select_19
+17256.521,1.696,1,128,norm_rope_elementwise,"void at::native::vectorized_elementwise_kernel<(int)2, at::native::CUDAFunctorOnSelf_add<long>, std::array<char *, (unsigned long)2>, (bool)0>(int, T2, T3)"

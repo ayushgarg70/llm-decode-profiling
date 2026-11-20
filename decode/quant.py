@@ -10,6 +10,11 @@ step reads only one row of it):
            layout -> PyTorch's built-in tinygemm kernel (aten._weight_int4pack_mm; the gpt-fast kernel).
     fp8    FP8 e4m3 weights AND activations (activations quantized on the fly), one scale per row
            -> torch._scaled_mm, i.e. cuBLAS FP8 GEMMs on Hopper's FP8 tensor cores (CUDA, sm89+ only).
+    nvfp4  Blackwell only (sm_100): NVFP4 weights AND activations: 4-bit e2m1 values, an FP8 scale per block of
+           16 along K plus one FP32 scale per tensor (~0.56 bytes/weight) -> FP4 tensor-core GEMMs.
+           torchao prototype (`NVFP4DynamicActivationNVFP4WeightConfig`); its optional Triton activation
+           kernel needs the separate `mslk` package, so it is turned off here.
+    nvfp4w NVFP4 weights only, BF16 activations (`NVFP4WeightOnlyConfig`): same bytes, no FP4 math.
 """
 
 from __future__ import annotations
@@ -17,7 +22,7 @@ from __future__ import annotations
 import torch
 from torch import nn
 
-SCHEMES = ("bf16", "int8", "int4", "fp8")
+SCHEMES = ("bf16", "int8", "int4", "fp8", "nvfp4", "nvfp4w")
 
 
 def config_for(scheme: str):
@@ -32,6 +37,14 @@ def config_for(scheme: str):
         from torchao.quantization.quantize_.common.kernel_preference import KernelPreference
 
         return q.Float8DynamicActivationFloat8WeightConfig(granularity=PerRow(), kernel_preference=KernelPreference.TORCH)
+    if scheme == "nvfp4":
+        from torchao.prototype.mx_formats.inference_workflow import NVFP4DynamicActivationNVFP4WeightConfig
+
+        return NVFP4DynamicActivationNVFP4WeightConfig(use_triton_kernel=False)
+    if scheme == "nvfp4w":
+        from torchao.prototype.mx_formats.inference_workflow import NVFP4WeightOnlyConfig
+
+        return NVFP4WeightOnlyConfig()
     raise ValueError(scheme)
 
 

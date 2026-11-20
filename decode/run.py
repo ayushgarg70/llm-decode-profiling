@@ -105,14 +105,13 @@ def make_step_fn(mode: str, model: Transformer, cur_token: torch.Tensor, input_p
     raise ValueError(mode)
 
 
-def predicted_floor_ms(model: Transformer, batch: int, context: int, ceilings_path: str = "data/ceilings.json",
-                       weight_bytes: float | None = None):
+def predicted_floor_ms(model: Transformer, batch: int, context: int, weight_bytes: float | None = None):
     """Bandwidth floor. BF16: from the config (analysis/predict.py). Quantized: the bytes the quantized
     weights actually occupy (values + scales), plus the same BF16 KV cache."""
-    from analysis.predict import ModelShape, floor_ms, kv_bytes_per_token, load_ceilings
+    from analysis.predict import ModelShape, current_ceilings, floor_ms, kv_bytes_per_token
 
     m = ModelShape.from_config(model.args.hf_config)
-    ceilings, _ = load_ceilings(ceilings_path, "H100-SXM")
+    ceilings, _ = current_ceilings()
     if weight_bytes is None:
         return floor_ms(m, batch, context, ceilings["bandwidth_Bps"])
     return 1e3 * (weight_bytes + batch * context * kv_bytes_per_token(m)) / ceilings["bandwidth_Bps"]
@@ -138,8 +137,16 @@ def main(argv=None) -> None:
     ap.add_argument("--profile-steps", type=int, default=0,
                     help="profile K steps between cudaProfilerStart/Stop (for nsys), then exit; no CSV row")
     ap.add_argument("--nvtx-layers", action="store_true", help="per-layer NVTX ranges (eager modes only)")
+    ap.add_argument("--no-peak-memory-reorder", action="store_true",
+                    help="turn off Inductor's reorder_for_peak_memory pass (works around a 'Cycle detected in memory "
+                         "planning graph' compile error seen with NVFP4 at batch 32 on torch 2.15)")
     args = ap.parse_args(argv)
 
+    if args.no_peak_memory_reorder:
+        import torch._inductor.config as inductor_config
+
+        inductor_config.reorder_for_peak_memory = False
+        args.notes = (args.notes + " " if args.notes else "") + "inductor reorder_for_peak_memory=False"
     device = torch.device(args.device)
     dtype = torch.bfloat16 if device.type == "cuda" else torch.float32
     model, tokenizer = build(args.model, device, dtype)

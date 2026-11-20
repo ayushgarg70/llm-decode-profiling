@@ -9,6 +9,8 @@
 #   profiling/ncu_kernel.sh deep <name> <nvtx-range|-> <kernel-regex> <python -m args...>
 # Set NCU_SUDO=1 if check_gpu.sh said ncu needs sudo. ncu locks clocks to base and flushes caches
 # by default, so use its *percentages*, not its durations (times come from CUDA events / nsys).
+# NCU_CLOCK=none: leave the GPU's clocks alone (--clock-control none), so DRAM % is comparable to timing runs.
+# NCU_SKIP=n: skip the first n kernels that match the regex (e.g. 224 to reach lm_head in a graph step).
 set -euo pipefail
 cd "$(dirname "$0")/.."
 MODE=${1:?step|deep}; NAME=${2:?name}; shift 2
@@ -17,6 +19,8 @@ NCU=${NCU:-$(command -v ncu || ls /opt/nvidia/nsight-compute/*/ncu /usr/local/cu
 [ -x "$NCU" ] || { echo "ncu not found; set NCU=/path/to/ncu"; exit 1; }
 PRE=(); [ "${NCU_SUDO:-0}" = 1 ] && PRE=(sudo -E)
 COMMON=(--profile-from-start off --nvtx --import-source yes -f -o "reports/$NAME")
+[ -n "${NCU_CLOCK:-}" ] && COMMON+=(--clock-control "$NCU_CLOCK")
+[ -n "${NCU_SKIP:-}" ] && COMMON+=(-s "$NCU_SKIP")
 if [ "$MODE" = step ]; then
   CMD=("${PRE[@]}" "$NCU" "${COMMON[@]}" --nvtx-include "decode step 0/"
        --section SpeedOfLight --section MemoryWorkloadAnalysis --section ComputeWorkloadAnalysis --section LaunchStats --section Occupancy

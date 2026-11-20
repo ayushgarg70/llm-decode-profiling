@@ -121,6 +121,35 @@ def batching():
     ])
 
 
+def fixed_cost():
+    # source cropped by 230 px at the top and 90 at the bottom (empty margin)
+    draw("fixed_cost_concept", (0, 25, 0, 30), [
+        {"xy": (250, 70), "ha": "left", "weight": "semibold", "fs": FS + 1,
+         "text": "H100: the kernels of one decode step, one after another"},
+        {"xy": (250, 290), "ha": "left", "weight": "semibold", "fs": FS + 1,
+         "text": "B200: the same kernels, with about twice the memory bandwidth"},
+        {"xy": (100, 485), "text": "GPU memory\n(wider pipe =\nmore bandwidth)", "fs": FS - 1},
+        {"xy": (560, 505), "text": "fixed cost of each kernel (grey):\nstarting it, getting memory requests\nin flight, finishing: the same on both GPUs",
+         "to": (532, 395)},
+        {"xy": (1040, 505), "text": "moving the kernel's bytes (blue):\nhalf as long on the B200", "to": (1020, 395)},
+        {"xy": (1225, 360), "ha": "left", "text": "the step ends sooner,\nbut not in half the time"},
+    ])
+
+
+def tensor_memory():
+    draw("tensor_memory_concept", (330, 90, 330, 50), [
+        {"xy": (425, -45), "weight": "semibold", "fs": FS + 1, "text": "H100 (Hopper)"},
+        {"xy": (1240, -45), "weight": "semibold", "fs": FS + 1, "text": "B200 (Blackwell)"},
+        {"xy": (-170, 250), "text": "tensor cores\n(HGMMA on Hopper,\nUTCHMMA on Blackwell)", "to": (190, 250)},
+        {"xy": (-170, 470), "text": "on-chip\nshared memory", "to": (190, 480)},
+        {"xy": (-170, 650), "text": "TMA copy engine:\nmoves whole tiles\n(UTMALDG)", "to": (120, 650)},
+        {"xy": (-170, 845), "text": "GPU memory (HBM)", "to": (65, 845)},
+        {"xy": (610, 112), "text": "results go straight\ninto registers"},
+        {"xy": (1272, 112), "text": "tensor memory (new): results land here"},
+        {"xy": (1835, 250), "text": "registers: results\nare copied in\nwith LDTM", "to": (1530, 250)},
+    ])
+
+
 if __name__ == "__main__":
-    for f in (decode_step, launch_overhead, hopper_paths, batching):
+    for f in (decode_step, launch_overhead, hopper_paths, batching, fixed_cost, tensor_memory):
         f()

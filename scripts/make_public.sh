@@ -17,7 +17,7 @@ git archive HEAD | tar -x -C "$TMP/tree"
 rm -rf "$TMP/tree/private"
 grep -v '^@private/' "$TMP/tree/CLAUDE.md" > "$TMP/claude" && mv "$TMP/claude" "$TMP/tree/CLAUDE.md"
 
-LEAKS='([0-9]{1,3}\.){3}[0-9]{1,3}/32|89\.169\.|computeinstance-|project-e00|vpc(subnet|allocation|network|securitygroup)-|computedisk-|hf_[A-Za-z0-9]{30,}|ssh-ed25519 |BEGIN [A-Z ]*PRIVATE KEY|github-personal|SSH_CLIENT|SSH_CONNECTION|private/'
+LEAKS='([0-9]{1,3}\.){3}[0-9]{1,3}/32|89\.169\.|204\.12\.|computeinstance-|project-[eu]00|vpc(subnet|allocation|network|securitygroup)-|computedisk-|hf_[A-Za-z0-9]{30,}|ssh-ed25519 |BEGIN [A-Z ]*PRIVATE KEY|github-personal|SSH_CLIENT|SSH_CONNECTION|private/'
 if grep -rInE "$LEAKS" "$TMP/tree" --exclude=uv.lock --exclude=make_public.sh; then
   echo "^^^ possible private data in the public tree: fix on main first"; exit 1
 fi

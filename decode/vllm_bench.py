@@ -30,10 +30,10 @@ DEFAULT_MODEL = "meta-llama/Llama-3.1-8B"
 
 
 def floor_ms(model: str, batch: int, context: int, kv_bytes: float) -> float:
-    from analysis.predict import ModelShape, floor_ms as fm, load_ceilings, load_config
+    from analysis.predict import ModelShape, current_ceilings, floor_ms as fm, load_config
 
     m = ModelShape.from_config(load_config(model))
-    ceilings, _ = load_ceilings("data/ceilings.json", "H100-SXM")
+    ceilings, _ = current_ceilings()
     return fm(m, batch, context, ceilings["bandwidth_Bps"], kv_bytes=kv_bytes)
 
 

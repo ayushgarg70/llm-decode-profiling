@@ -1,0 +1,535 @@
+start_us,dur_us,grid,block,group,kernel
+0.000,1.984,2,512,other,"void at::native::<unnamed>::multi_tensor_apply_kernel<at::native::<unnamed>::TensorListMetadata<(int)2>, at::native::<unnamed>::UnaryOpFunctor<long, (int)2, (int)1, (int)1>, at::native::Copy<long, lon"
+8.320,4.128,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_embedding_mean_mul_pow_rsqrt_t_view_0
+14.528,8.192,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+23.104,8.128,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+31.552,1.536,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+33.408,7.968,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+41.696,1.664,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+43.840,1.600,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+45.760,1.696,73,32,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_4
+47.808,6.496,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+54.688,2.912,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+57.920,2.144,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+62.304,8.896,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+72.000,3.456,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_embedding_mean_mul_pow_rsqrt_t_view_6
+77.568,13.920,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+93.728,14.080,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+108.128,5.408,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+116.288,22.656,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+139.520,4.928,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_embedding_mean_mul_pow_rsqrt_t_view_8
+146.304,8.160,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+154.816,7.968,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+163.104,1.696,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+165.120,7.872,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+173.408,1.408,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+175.392,1.472,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+177.184,1.920,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+179.680,6.272,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+186.560,2.688,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+189.568,1.888,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+193.600,8.160,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+202.080,4.288,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_embedding_mean_mul_pow_rsqrt_t_view_10
+208.544,13.696,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+224.128,13.632,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+238.112,5.216,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+245.312,20.992,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+266.656,3.584,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+272.224,8.192,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+280.768,7.840,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+288.992,1.568,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+291.104,7.712,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+299.136,1.440,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+300.896,1.472,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+302.720,6.144,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+309.440,2.656,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+312.416,1.728,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+316.832,8.672,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+325.856,3.456,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+331.648,13.504,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+347.392,13.664,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+361.408,5.440,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+369.024,20.896,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+390.240,4.832,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+397.248,8.128,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+405.728,8.128,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+414.176,1.696,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+416.224,7.904,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+424.320,1.408,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+426.304,1.504,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+428.096,1.856,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+430.336,6.208,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+437.248,2.688,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+440.256,1.728,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+443.968,8.096,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+452.384,3.968,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+458.336,13.696,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+473.888,13.409,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+487.649,5.248,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+494.913,20.704,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+516.065,3.840,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+522.081,8.256,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+530.657,8.128,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+539.105,2.016,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+541.473,8.000,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+549.825,1.536,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+551.713,1.632,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+553.505,6.144,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+560.257,2.624,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+563.201,1.728,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+566.945,8.160,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+575.425,3.328,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+580.833,13.344,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+596.513,13.792,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+610.625,5.408,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+618.401,20.960,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+639.681,4.896,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+646.689,8.800,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+655.809,8.000,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+664.129,1.696,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+666.177,8.000,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+674.497,1.568,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+676.417,1.632,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+678.369,1.888,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+680.609,6.240,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+687.457,2.816,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+690.433,1.728,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+694.177,8.288,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+702.945,3.936,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+709.089,13.184,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+724.353,13.696,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+738.369,5.312,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+745.697,20.992,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+767.009,3.584,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+772.641,8.128,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+781.089,7.840,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+789.409,1.536,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+791.425,7.968,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+799.713,1.600,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+801.633,1.568,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+803.521,6.240,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+810.369,2.816,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+813.505,1.888,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+817.505,8.384,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+826.177,3.552,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+831.905,13.440,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+847.361,13.664,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+861.505,5.376,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+869.057,20.800,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+890.049,4.672,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+896.993,8.064,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+905.441,7.968,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+913.985,1.728,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+916.129,7.808,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+924.225,1.440,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+925.985,1.408,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+927.873,1.888,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+930.113,6.208,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+936.961,2.816,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+940.097,1.696,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+943.969,8.224,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+952.737,4.032,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+958.785,13.024,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+973.857,14.080,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+988.257,5.280,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+995.585,20.736,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1016.641,3.680,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+1022.369,8.288,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1030.977,7.904,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1039.233,1.504,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+1041.089,7.712,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1049.121,1.440,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+1050.881,1.440,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+1052.673,6.272,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+1059.585,2.624,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+1062.721,1.888,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+1066.785,8.288,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1075.393,3.360,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+1080.993,14.144,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1097.345,13.505,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1111.170,5.440,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+1119.010,20.864,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1140.194,5.184,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+1147.522,8.576,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1156.450,7.936,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1164.706,1.696,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+1166.594,7.648,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1174.594,1.408,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+1176.322,1.472,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+1178.210,1.760,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+1180.290,6.176,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+1187.106,2.624,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+1190.082,1.728,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+1193.826,8.384,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1202.530,3.936,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+1208.450,13.632,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1224.098,13.376,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1237.794,5.248,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+1245.666,20.704,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1266.850,3.744,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+1273.282,8.352,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1281.954,8.160,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1290.434,1.856,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+1292.642,7.872,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1300.834,1.568,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+1302.594,1.504,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+1304.546,6.016,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+1311.234,2.656,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+1314.210,1.728,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+1317.954,8.224,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1326.530,3.392,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+1332.290,13.216,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1347.682,13.792,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1361.890,5.408,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+1369.442,21.280,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1391.298,4.992,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+1398.466,8.480,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1407.266,8.032,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1415.650,1.664,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+1417.666,7.808,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1425.794,1.568,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+1427.714,1.632,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+1429.698,1.920,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+1431.938,6.240,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+1438.626,2.656,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+1441.794,1.728,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+1445.538,8.192,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1454.050,3.840,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+1459.970,13.408,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1475.586,13.632,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1489.538,5.472,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+1497.346,21.024,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1518.722,3.936,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+1524.834,8.768,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1533.922,8.128,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1542.210,1.536,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+1544.098,7.872,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1552.322,1.408,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+1554.114,1.440,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+1556.002,6.112,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+1562.882,2.656,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+1565.858,1.568,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+1569.410,8.064,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1577.794,3.232,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+1583.074,13.472,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1598.466,13.440,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1612.258,5.248,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+1619.650,21.664,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1641.634,5.120,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+1649.250,8.192,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1657.794,8.160,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1666.274,2.112,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+1668.770,7.968,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1677.058,1.568,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+1678.818,1.440,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+1680.674,1.760,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+1682.754,6.176,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+1689.570,2.624,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+1692.514,1.728,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+1696.290,8.064,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1704.706,4.000,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+1711.042,13.377,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1726.595,14.080,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1740.995,5.376,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+1748.483,21.216,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1770.051,3.776,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+1776.035,8.352,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1784.707,8.128,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1793.187,1.888,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+1795.427,7.872,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1803.651,1.568,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+1805.539,1.632,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+1807.619,6.368,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+1814.435,2.624,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+1817.411,1.696,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+1821.155,8.320,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1829.795,3.232,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+1835.107,13.248,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1850.403,14.560,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1865.283,5.312,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+1872.771,20.672,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1893.763,4.672,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+1900.451,8.224,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1908.995,7.968,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1917.443,1.664,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+1919.523,7.968,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1927.907,1.568,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+1930.019,1.632,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+1932.099,1.920,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+1934.339,6.112,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+1941.059,2.784,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+1944.163,1.888,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+1948.163,8.288,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1956.803,4.064,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+1963.011,13.984,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1979.011,13.536,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+1992.867,5.440,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+2000.195,20.736,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2021.251,3.808,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+2027.107,8.192,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2035.619,7.936,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2043.875,1.664,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+2045.891,7.840,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2054.435,1.568,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+2056.547,1.600,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+2058.723,6.272,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+2065.571,2.816,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+2068.707,1.888,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+2072.739,8.544,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2081.603,3.328,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+2086.819,13.344,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2102.467,13.792,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2116.579,5.312,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+2124.003,20.768,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2145.123,4.864,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+2151.971,8.160,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2160.483,8.000,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2168.803,1.536,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+2170.659,7.808,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2178.819,1.408,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+2180.579,1.408,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+2182.307,1.952,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+2184.739,7.072,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+2192.419,2.784,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+2195.555,1.728,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+2199.459,8.320,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2208.099,4.000,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+2214.307,13.408,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2229.923,13.408,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2243.651,5.504,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+2251.331,20.832,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2272.483,3.968,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+2278.659,8.352,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2287.203,7.936,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2295.459,1.728,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+2297.539,7.776,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2305.635,1.440,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+2307.587,1.408,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+2309.347,6.144,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+2316.099,2.656,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+2319.075,1.760,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+2322.787,8.064,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2331.171,3.200,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+2336.387,13.729,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2352.004,13.280,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2365.636,5.248,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+2373.348,20.928,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2394.596,5.056,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+2401.796,8.800,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2410.916,8.128,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2419.364,1.856,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+2421.572,8.000,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2429.988,1.408,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+2431.748,1.440,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+2433.508,1.920,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+2435.748,6.176,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+2442.532,2.656,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+2445.540,1.696,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+2449.252,8.160,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2457.892,4.224,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+2464.292,13.216,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2479.716,14.048,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2494.116,5.408,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+2502.116,21.248,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2523.684,3.808,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+2529.636,8.416,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2538.372,8.032,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2546.756,1.664,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+2548.772,7.936,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2557.028,1.568,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+2559.108,1.664,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+2561.028,6.144,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+2567.780,2.656,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+2570.756,1.728,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+2574.500,8.256,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2583.076,3.232,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+2588.452,13.504,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2604.004,13.472,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2617.988,5.312,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+2625.284,20.544,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2646.148,4.864,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+2653.284,8.032,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2661.764,7.968,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2670.052,1.664,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+2672.068,7.840,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2680.260,1.568,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+2682.148,1.696,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+2684.132,1.920,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+2686.404,6.272,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+2693.284,2.784,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+2696.484,1.856,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+2700.644,8.288,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2709.252,4.160,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+2715.588,13.600,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2731.172,13.824,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2745.188,5.280,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+2752.580,20.544,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2773.444,3.520,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+2779.012,8.288,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2787.620,7.840,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2795.780,1.888,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+2798.180,7.840,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2806.372,1.568,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+2808.292,1.600,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+2810.404,6.272,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+2817.316,2.816,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+2820.452,1.696,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+2824.292,8.384,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2832.836,3.136,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+2838.020,13.856,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2854.276,13.696,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2868.292,5.248,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+2875.524,20.544,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2896.580,4.800,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+2903.364,8.224,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2911.908,8.032,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2920.260,1.504,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+2922.116,7.840,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2930.436,1.408,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+2932.164,1.472,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+2934.116,1.952,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+2936.420,6.272,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+2943.556,2.784,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+2946.660,1.856,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+2950.692,8.833,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2959.845,4.320,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+2966.373,13.600,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2982.181,13.824,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+2996.325,5.440,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+3004.485,21.344,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3026.149,3.968,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+3032.133,8.032,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3040.485,7.840,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3048.645,1.536,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+3050.565,7.872,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3058.757,1.440,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+3060.517,1.472,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+3062.309,6.688,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+3069.605,2.624,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+3072.581,1.696,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+3076.293,8.224,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3084.805,3.168,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+3090.021,13.280,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3105.157,13.280,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3118.917,5.376,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+3126.469,20.832,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3147.621,5.024,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+3155.141,8.320,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3163.813,8.096,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3172.261,1.856,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+3174.661,7.712,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3182.693,1.440,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+3184.485,1.472,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+3186.309,1.728,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+3188.357,6.432,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+3195.397,2.656,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+3198.405,1.760,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+3202.373,8.192,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3210.885,4.096,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+3217.157,13.536,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3232.901,13.920,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3247.301,5.408,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+3254.821,20.800,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3275.941,3.680,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+3281.829,8.576,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3290.725,8.064,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3299.109,1.664,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+3301.125,8.064,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3309.509,1.568,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+3311.269,1.440,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+3313.029,6.176,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+3319.813,2.656,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+3322.885,1.728,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+3326.789,7.936,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3335.045,3.392,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+3340.517,13.440,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3356.069,13.312,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3369.701,5.312,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+3377.061,21.472,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3398.885,4.896,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+3405.989,8.096,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3414.405,7.936,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3422.661,1.664,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+3424.709,7.840,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3433.093,1.568,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+3435.205,1.568,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+3437.221,1.888,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+3439.461,6.112,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+3446.181,2.816,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+3449.317,1.888,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+3453.349,8.320,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3461.989,4.416,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+3468.741,13.632,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3484.229,13.632,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3498.181,5.280,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+3505.733,20.896,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3526.949,3.584,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+3532.581,8.096,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3541.029,7.840,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3549.349,1.856,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+3551.525,8.000,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3559.845,1.568,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+3561.829,1.632,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+3564.037,6.336,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+3570.981,2.784,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+3574.085,1.729,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+3577.830,8.160,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3586.278,3.104,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+3591.430,13.184,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3606.630,13.824,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3620.774,5.280,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+3628.038,21.152,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3649.510,4.672,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+3656.198,8.032,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3664.550,7.936,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3672.806,1.536,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+3674.662,7.776,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3682.758,1.408,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+3684.646,1.632,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+3686.598,1.920,3,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_9
+3688.838,6.208,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+3695.654,2.784,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+3698.790,1.856,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+3703.238,8.512,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3712.070,4.128,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+3718.342,14.016,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3735.078,14.304,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3749.734,5.472,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+3757.382,21.088,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3778.822,3.680,1,128,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_11
+3784.422,8.128,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3792.902,7.840,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3801.062,1.536,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+3802.950,7.744,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3811.014,1.440,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+3812.806,1.536,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+3814.662,6.336,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+3821.766,2.656,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+3824.774,1.728,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+3828.454,8.672,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3837.478,3.392,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_12
+3842.886,13.376,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3858.246,13.504,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3872.230,5.344,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+3879.782,20.928,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3901.030,4.960,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_13
+3908.166,8.512,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3916.998,8.128,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3925.286,1.856,8,128,kv_cache_write,triton_poi_fused_add_cat_index_index_copy_mul_neg_split_transpose_unsqueeze_view_1
+3927.462,7.840,16,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3935.622,1.440,1,64,kv_cache_write,triton_poi_fused_index_copy_transpose_view_2
+3937.382,1.536,32,128,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_3
+3939.238,1.792,73,32,attention,triton_poi_fused__scaled_dot_product_cudnn_attention_add_cat_index_le_mul_neg_scalar_tensor_split_transpose_unsqueeze_view_where_4
+3941.350,6.240,72,384,attention,cudnn_generated_fort_native_sdpa_sm100_flash_fprop_f16_knob_1_8x128x128_4x1x1_cga1x1x1_kernel0_0
+3948.422,2.688,32,256,attention,"void cudnn::fusion::lean_reduction_kernel<(bool)0, (bool)0, (bool)0>(void *, float *, float *, float *, float *, const float *, float *, float *, float *, float *, float *, unsigned int, unsigned int,"
+3951.430,1.728,1,512,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_t_transpose_view_5
+3955.462,8.256,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3964.070,4.000,1,256,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_t_view_14
+3970.246,13.344,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+3986.182,13.664,112,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+4000.198,5.408,1,1024,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_amax_clamp_div_mul_silu_t_view_7
+4007.750,20.864,32,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+4028.966,5.600,1,64,weight_gemm,triton_red_fused__scaled_mm__to_copy_abs_add_amax_clamp_div_mean_mul_pow_rsqrt_slice_t_view_15
+4036.774,102.656,1002,256,weight_gemm,"void cutlass::device_kernel<at::cuda::detail::enable_3x_kernel_for_sm10_or_later<cutlass::gemm::kernel::GemmUniversal<cute::tuple<int, int, int>, cutlass::gemm::collective::CollectiveMma<cutlass::gemm"
+4139.910,21.984,1,1024,sampling,triton_red_fused_argmax_select_view_16
+4167.718,1.696,1,128,norm_rope_elementwise,"void at::native::vectorized_elementwise_kernel<(int)2, at::native::CUDAFunctorOnSelf_add<long>, std::array<char *, (unsigned long)2>, (bool)0>(int, T2, T3)"

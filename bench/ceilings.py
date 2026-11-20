@@ -3,8 +3,11 @@
   read bandwidth   two reductions over a 4 GiB BF16 tensor: x.sum(), and x.view(8192, -1).sum(1)
                    (many independent rows); bytes = tensor size (each byte read once)
   copy bandwidth   y.copy_(x); bytes = 2 x tensor size (read x + write y)
-  roof             the best of these streaming kernels. One kernel alone isn't a reliable roof: on the H100,
-                   x.sum() reached 3.08 TB/s while the row-sum reached 3.15 TB/s.
+  GEMV bandwidth   the same 4 GiB viewed as a [524288, 4096] weight, times one BF16 vector (exactly what a
+                   batch-1 decode matmul does); bytes = weight size (the vector and output are < 1.1 MB)
+  roof             the best of these streaming kernels. One kernel alone isn't a reliable roof: on the B200,
+                   x.sum() reached 5.96 TB/s, the row-sum 6.42, the copy 6.62, and the lm_head GEMV in a
+                   decode trace 6.79 TB/s.
   BF16 matmul      8192 x 8192 x 8192; FLOPs = 2 * M * N * K
 
 The tensor is ~80x larger than the H100's 50 MB L2 cache, so we measure HBM, not cache.
@@ -58,17 +61,22 @@ def main(gib: int = 4, reps: int = 30, n: int = 8192) -> None:
         t_read = bench(lambda: x.sum(), reps)
         t_rows = bench(lambda: x.view(8192, -1).sum(1), reps)
         t_copy = bench(lambda: y.copy_(x), reps)
+        w = x.view(-1, 4096)
+        v = torch.randn(1, 4096, device="cuda", dtype=torch.bfloat16)
+        t_gemv = bench(lambda: torch.nn.functional.linear(v, w), reps)
         t_mm = bench(lambda: torch.mm(a, b), reps)
 
     read = nbytes / (statistics.median(t_read) / 1e3)
     rows = nbytes / (statistics.median(t_rows) / 1e3)
     copy = 2 * nbytes / (statistics.median(t_copy) / 1e3)
+    gemv = nbytes / (statistics.median(t_gemv) / 1e3)
     flops = 2 * n**3 / (statistics.median(t_mm) / 1e3)
     env = environment()
     result = {
         "date": stamp, "gpu": env["gpu"], "gpu_form_factor": env["gpu_form_factor"],
-        "bandwidth_Bps": max(read, rows, copy), "read_Bps": read, "read_rows_Bps": rows, "copy_Bps": copy,
-        "roof_kernel": max((read, "sum"), (rows, "row-sum"), (copy, "copy"))[1], "peak_flops": flops,
+        "bandwidth_Bps": max(read, rows, copy, gemv), "read_Bps": read, "read_rows_Bps": rows, "copy_Bps": copy,
+        "gemv_Bps": gemv, "roof_kernel": max((read, "sum"), (rows, "row-sum"), (copy, "copy"), (gemv, "gemv"))[1],
+        "peak_flops": flops,
         "read_ms_median": statistics.median(t_read), "copy_ms_median": statistics.median(t_copy),
         "matmul_ms_median": statistics.median(t_mm),
         "read_Bps_best": nbytes / (min(t_read) / 1e3), "matmul_flops_best": 2 * n**3 / (min(t_mm) / 1e3),
@@ -87,7 +95,7 @@ def main(gib: int = 4, reps: int = 30, n: int = 8192) -> None:
         w.writerow(result)
 
     ds = DATASHEET[gpu_key(env["gpu"])]
-    for name, v in (("read (sum)", read), ("read (row-sum)", rows), ("copy", copy)):
+    for name, v in (("read (sum)", read), ("read (row-sum)", rows), ("copy", copy), ("gemv", gemv)):
         print(f"{name:15} {v / 1e12:.3f} TB/s  ({100 * v / ds['bandwidth_Bps']:.1f}% of {ds['bandwidth_Bps'] / 1e12:.2f} TB/s datasheet)")
     roof = result["bandwidth_Bps"]
     print(f"roof = {result['roof_kernel']}: {roof / 1e12:.3f} TB/s")
